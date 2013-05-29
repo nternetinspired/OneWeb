@@ -1115,6 +1115,7 @@ abbr {
   font-weight: 400;
   line-height: 3;
   margin-right: 0.809em;
+  margin-bottom: 1.618em;
   padding: 0 1em;
   vertical-align: middle;
   white-space: nowrap; }
@@ -1253,13 +1254,20 @@ abbr {
    ========================================================================== */
 /* Gives the sections some breathing space */
 [class*="-row"] {
-  padding: 3.236em 1.618em 1.618em; }
+  padding: 1.618em 1.618em 0; }
+  @media only screen and (min-width: 90em) {
+    [class*="-row"] {
+      padding: 3.236em 1.618em 1.618em; } }
+
+.header-row {
+  padding-bottom: 1.618em; }
 
 /* Then de-bork the header and credit rows! */
-.header-row,
-.breadcrumb-row,
-.credit-row {
-  padding-top: 1.618em; }
+@media only screen and (min-width: 90em) {
+  .header-row,
+  .breadcrumb-row,
+  .credit-row {
+    padding-top: 1.618em; } }
 
 /* ==========================================================================
     WELLS
@@ -2087,7 +2095,6 @@ of adding icon classes in our markup. It's more awesome. */
    ========================================================================== */
 .footer-row {
   background: #cd6e57;
-  padding-top: 3.236em;
   /* Offset the content container as we're padding the grid items */
   /* Make each module a grid item */ }
   @media only screen and (min-width: 45em) {
