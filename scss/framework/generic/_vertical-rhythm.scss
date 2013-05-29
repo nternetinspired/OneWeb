@@ -1,0 +1,45 @@
+
+/* ==========================================================================
+    VERTICAL RHYTHM
+   ========================================================================== */
+
+/*
+ * Applies consistent spacing, derived from the baseline height and default
+ * font size, to generate a consistent vertical rhythm throughout.
+ *
+ * Note:
+ *
+ * Any item which has its size already set with the font-size mixin, h1 - h6
+ * for example, already has a bottom-margin set with a value appropriate to
+ * the font-size.
+ */
+address,
+blockquote,
+dl,
+fieldset,
+figure,
+form,
+hgroup,
+.media,
+meter,
+ol,
+p,
+pre,
+progress,
+select,
+small,
+table,
+textarea,
+ul {
+	margin-top: 0;
+	margin-bottom: $single-spacing-unit;
+}
+
+/* Some extra space for our articles. */
+article {
+	margin-bottom: $single-spacing-unit*3;
+}
+/* remove this for the last intro article in a blog layout. */
+.intro-articles article:last-child {
+	margin-bottom: $single-spacing-unit;
+}

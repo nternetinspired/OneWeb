@@ -1,0 +1,87 @@
+
+/* ==========================================================================
+    FORMS
+   ========================================================================== */
+
+/* Some form basics. */
+form {
+
+    input,
+    select,
+    textarea {
+        @include transition;
+    }
+
+    ul {
+        list-style-type: none;
+        margin-bottom: 0;
+    }
+}
+
+/* Remove default fieldset styles. */
+fieldset {
+    border: 1px solid $brand-border;
+    border-radius: $brand-radius;
+    padding: $single-spacing-unit;
+}
+
+input,
+textarea {
+    display: block;
+    margin-bottom: $half-spacing-unit;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+textarea {
+    width: 100%;
+    border:1px solid $brand-border;
+    padding: $half-spacing-unit*.5;
+    border-radius: $brand-radius;
+
+    &:focus {
+        border: 1px solid darken($brand-border, 10%);
+        outline: none;
+        outline-width: 0;
+    }
+}
+
+/* Allow only vertical resizing of textareas. */
+textarea {
+    resize: vertical;
+}
+
+/* Make checkboxes and radio buttons display inline. */
+label {
+    display: inline-block;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    display: inline-block;
+    margin-left: $half-spacing-unit/2;
+    margin-right: $half-spacing-unit/2;
+}
+
+select{
+    width: 100%;
+    height: 2em;
+    border:1px solid $brand-border;
+}
+
+progress,
+meter {
+    display: block;
+    width: 100%;
+    height: $single-spacing-unit;
+}

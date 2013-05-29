@@ -1,0 +1,30 @@
+
+/* ==========================================================================
+    LISTS
+   ========================================================================== */
+
+/*
+ * There's a reason it's called 'hanging punctuation', bullets should be indented.
+ * See: http://www.markboulton.co.uk/journal/five-simple-steps-to-better-typography-part-2
+ * for an explanation why. The following kills browser default indents. Nice.
+ */
+ul,
+ol,
+dl {
+    padding: 0;
+}
+
+/* A little style maestro! */
+ul {
+	list-style-type: circle;
+}
+
+/* We don't need vertical space in nested lists, but we do need to add
+* the default indent we removed above! */
+li {
+    > ul,
+    > ol {
+         margin-bottom: 0;
+         padding-left: 2em;
+     }
+}

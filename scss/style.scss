@@ -1,0 +1,100 @@
+
+/* ==========================================================================
+   Template:	Oneweb
+   Version: 	3.0 for Joomla 2.5, 3+
+   Created: 	April 2013
+
+   Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
+   Copyright:	Seth Warburton - (C) 2013
+   License:	GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
+
+   Inspiration:	https://github.com/h5bp/html5-boilerplate
+		https://github.com/malarkey/320andup/
+		https://github.com/csswizardry/inuit.css
+   ========================================================================== *
+ * INTRODUCTION
+ * ============
+ *
+ * Oneweb is an Object Orientated framework and so attempts to separate out
+ * everything into re-usable modules. Unlike most other frameworks it tries
+ * to abstract the 'design' away from the layout. The intention is that you
+ * never have to do battle with the framework.
+ *
+ * Breaking everything down into maintainable, and easily digestible, chunks
+ * makes it easy to find and change what you want and separating the basic
+ * design constructs from their styling makes it possible to easily update
+ * the framework without breaking your 'design'.
+ *
+ * HOW DOES IT WORK?
+ * =================
+ *
+ * The Oneweb framework handles basic layout and provides all the css 'tools',
+ * while the UI template does all the pretty stuff.
+ *
+ * This file pulls in the Oneweb framework and any modules that are enabled
+ * by default. After that elements are styled by pulling in modules from the
+ * UI folder.
+ *
+ * Modifications to the framework should be made ONLY by overriding its
+ * defaults from within the UI template, using the _variables.scss file.
+ *
+ * Within the UI folder you can do almost anything you want. For example, if
+ * you want to add some widgets to your template drop _widgets.scss into the
+ * ui folder and then import _widgets.scss using this file. You can also
+ * enable the import of any framework modules that are disabled by default,
+ * simply by setting the use paramter to true, e.g.,
+ *
+ * $use-wells:             true;
+ *
+ * STYLEGUIDE
+ * ==========
+ *
+ * For my sanity an yours Oneweb has been authored according to a styleguide,
+ * STYLEGUIDE.md
+ *
+   ========================================================================== */
+
+/*
+ * _variables.scss overrides framework defaults, and enables optional modules,
+ * so it needs to be loaded first.
+ *
+ *
+ * Any variables you find set in framework/_defaults.scss should be overridden
+ * in ui/_variables.scss.
+ */
+@import "variables";
+
+/* Now, let's bring in the framework! */
+@import "framework/oneweb";
+
+/* Next up, the template UI! */
+/* ==========================================================================
+	Package:	Oneweb template UI
+	Version: 	1.0
+	Created: 	April 2013
+   ========================================================================== */
+
+// ELEMENTS:
+@import "ui/elements/links";
+@import "ui/elements/typography";
+
+//RESOURCES:
+@import "ui/generic/icomoon";
+
+//OBJECTS:
+@import "ui/objects/buttons";
+@import "ui/objects/wells";
+@import "ui/objects/icons";
+@import "ui/objects/rows";
+
+@import "ui/objects/header";
+@import "ui/objects/logo";
+@import "ui/objects/nav";
+@import "ui/objects/banner";
+
+@import "ui/objects/article-actions";
+@import "ui/objects/article-info";
+@import "ui/objects/above-row-modules";
+@import "ui/objects/below-row-modules";
+
+@import "ui/objects/footer";

@@ -1,0 +1,10 @@
+
+/* ==========================================================================
+    ARTICLE INFO
+   ========================================================================== */
+
+/* Article category, author, publish date, hits, etc. */
+.article-meta {
+	@extend .muted;
+	@include font-size($milli-size);
+}

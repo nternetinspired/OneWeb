@@ -1,0 +1,43 @@
+
+/* ==========================================================================
+    ICONS
+   ========================================================================== */
+
+/* Let's apply the icon styles semantically to elements instead
+of adding icon classes in our markup. It's more awesome. */
+
+.twitter {
+	@extend .icon-twitter;
+}
+.googleplus {
+	@extend .icon-google-plus;
+}
+.dribbble {
+	@extend .icon-dribbble;
+}
+.facebook {
+	@extend .icon-facebook;
+}
+.github {
+	@extend .icon-github;
+}
+.rss {
+	@extend .icon-feed;
+}
+
+/* Print /email icons are ugly, let's not bother! */
+/*
+.icon-envelope {
+	@extend .icon-mail;
+}
+*/
+.icon-edit {
+	@extend .icon-pencil;
+}
+
+/* a generic icon spacer, because putting space inside spans is junky, clunnky, oh so not funky */
+/*
+[class^="icon-"]:before {
+	padding-right: 0.25em;
+}
+*/

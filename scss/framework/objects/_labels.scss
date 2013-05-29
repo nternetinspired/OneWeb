@@ -1,0 +1,14 @@
+@if $use-labels == true{
+
+/* ==========================================================================
+    LABELS
+   ========================================================================== */
+
+    [class*="label"] {
+        padding: .125em .25em;
+        text-align: center;
+        background-color: $brand-background;
+        border-radius: $brand-radius;
+    }
+
+}//endif

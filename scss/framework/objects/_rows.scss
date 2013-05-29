@@ -1,0 +1,12 @@
+@if $use-rows == true {
+
+/* ==========================================================================
+    ROWS
+   ========================================================================== */
+
+	/* Gives the sections some breathing space */
+	[class*="-row"] {
+		padding: $single-spacing-unit;
+	}
+
+}//endif

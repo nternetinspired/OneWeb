@@ -1,0 +1,32 @@
+
+/* ==========================================================================
+    BELOW-ROW MODULES
+   ========================================================================== */
+
+/* Make each module a grid item */
+.below-row 	{
+
+	border-top: 1px solid $brand-border;
+	/* Offset the content container as we're padding the grid items */
+	.content {
+		@include media-query(lap) {
+			margin-left: -$single-spacing-unit;
+		}
+	}
+
+	/* Make each module a grid item */
+	.module {
+
+		@extend .grid-item;
+
+		/* And give it a width on larger screens */
+		@include media-query(lap) {
+			@extend .lap-one-half;
+			margin-bottom: 0;
+			padding-left: $single-spacing-unit;
+		}
+		@include media-query(portable) {
+			@extend .portable-one-third;
+		}
+	}
+}

@@ -1,0 +1,44 @@
+
+/* ==========================================================================
+    IMAGES
+   ========================================================================== */
+
+/* Fluid images. */
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    -ms-interpolation-mode: bicubic;
+}
+
+/* Don't ignore `width` and/or `height` attributes if they are present. */
+img[width],
+img[height] {
+    max-width: none;
+}
+
+/*
+ * Image placement variations, used in Joomla's article image layouts.
+ *
+ * Of course, floated images typically need a margin so we extend the
+ * generic floatr classes here.
+ */
+.img-right {
+    @extend .float-right;
+    margin-left: $single-spacing-unit;
+}
+
+.img-left {
+    @extend .float-left;
+    margin-right: $single-spacing-unit;
+}
+
+.img-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Joomla has no center option, using "none" instead. Go figure. */
+.img-none img {
+    @extend .img-center;
+}

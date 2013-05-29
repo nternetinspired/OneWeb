@@ -1,0 +1,18 @@
+
+/* ==========================================================================
+   	CODE
+   ========================================================================== */
+
+pre,
+code,
+kbd,
+samp {
+    font-family: $code-font-family;
+}
+
+pre {
+    background-color: $brand-background;
+    border: 1px solid $brand-border;
+    border-radius: $brand-radius;
+    padding: 1em;
+}

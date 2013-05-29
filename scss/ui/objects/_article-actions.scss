@@ -1,0 +1,12 @@
+
+/* ==========================================================================
+    ARTICLE ACTIONS
+   ========================================================================== */
+
+/* The print / mail /edit links */
+.actions {
+    @extend .nav;
+    @include font-size($milli-size);
+    margin-top: 0;
+    text-align: right;
+}

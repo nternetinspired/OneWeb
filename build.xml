@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="OneWeb" default="site" basedir=".">
+    <!-- Do initialization stuff -->
+    <target name="prepare" >
+        <property file="build.properties"  override="true"/>
+        <if>
+            <equals arg1="${extension}" arg2="" />
+            <then>
+                <fail message="Extension not specified, use -Dextension=EXTENSION" />
+            </then>
+            <else>
+                <!--<property file="${extension}.properties"  override="true"/>-->
+            </else>
+        </if>
+    </target>
+
+    <property name="src" value="./" />
+
+    <target name="site" description="Copies files to the testing joomla site" depends="prepare">
+        <echo message="Copying template ..." />
+
+        <!-- Template - Site -->
+        <copy todir="${www.dir}/templates/oneweb" overwrite="true">
+            <fileset dir="${src}">
+                <include name="**" />
+                <exclude name="language" />
+            </fileset>
+        </copy>
+
+        <!-- Template - Languages -->
+        <copy todir="${www.dir}/language" overwrite="true">
+            <fileset dir="${src}/language">
+                <include name="**" />
+            </fileset>
+        </copy>
+    </target>
+
+</project>

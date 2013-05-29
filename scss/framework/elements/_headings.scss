@@ -1,0 +1,52 @@
+
+/* ==========================================================================
+    HEADINGS
+   ========================================================================== */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: $heading-font-family;
+    font-weight: $heading-font-weight;
+    text-rendering :optimizelegibility;
+    -moz-font-feature-settings: "liga=1, dlig=1";
+    -ms-font-feature-settings: "liga" 1, "dlig" 1;
+    -o-font-feature-settings: "liga" 1, "dlig" 1;
+    -webkit-font-feature-settings: "liga" 1, "dlig" 1;
+    font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+/* Heading sizes are set with a mixin to maintain vertical rhythm. */
+h1,
+.h1 {
+    @include font-size($h1-size);
+}
+h2,
+.h2 {
+    @include font-size($h2-size);
+}
+h3,
+.h3 {
+    @include font-size($h3-size);
+}
+h4,
+.h4 {
+    @include font-size($h4-size);
+}
+h5,
+.h5 {
+    @include font-size($h5-size);
+}
+h6,
+.h6 {
+    @include font-size($h6-size);
+}

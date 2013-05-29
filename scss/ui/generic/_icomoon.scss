@@ -1,0 +1,82 @@
+
+/* ==========================================================================
+    FONT-FACE FONTS
+   ========================================================================== */
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="icon-"] {
+*/
+
+/*.icon-home, .icon-pencil, .icon-connection, .icon-menu, */.icon-google-plus, .icon-facebook, .icon-twitter, .icon-feed, .icon-dribbble, .icon-github, .icon-paypal /*, .icon-print, .icon-mail */ {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+/* Not actually using the following right now, so commenting out. May, or may not,
+ * get round to grabbing a new set of font files.
+
+.icon-home:before {
+	content: "\e004";
+}
+.icon-pencil:before {
+	content: "\e005";
+}
+.icon-connection:before {
+	content: "\e006";
+}
+.icon-menu:before {
+	content: "\e007";
+}
+.icon-feed:before {
+	content: "\e002";
+}
+*/
+.icon-google-plus:before {
+	content: "\e000";
+}
+.icon-facebook:before {
+	content: "\e008";
+}
+.icon-twitter:before {
+	content: "\e001";
+}
+
+.icon-dribbble:before {
+	content: "\e009";
+}
+.icon-github:before {
+	content: "\e00a";
+}
+.icon-paypal:before {
+	content: "\e00b";
+}
+
+/* Print /email icons are ugly, let's not bother! */
+/*
+.icon-print:before {
+	content: "\e00c";
+}
+.icon-mail:before {
+	content: "\e00d";
+}
+*/

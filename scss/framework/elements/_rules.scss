@@ -1,0 +1,13 @@
+
+/* ==========================================================================
+    RULES
+   ========================================================================== */
+
+hr {
+	border: 0;
+    border-top: 1px solid $brand-border;
+    display: block;
+    height: 1px;
+    margin: $single-spacing-unit 0;
+    padding: 0;
+}

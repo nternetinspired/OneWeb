@@ -1,0 +1,29 @@
+
+/* ==========================================================================
+   	FIGURES
+   ========================================================================== */
+
+figure {
+
+	figcaption {
+		@extend .milli;
+		@extend .muted;
+	}
+
+	img {
+		margin-bottom: $half-spacing-unit;
+	}
+
+	/*
+	* Joomla's 'none' image alignment option defaults centering the image.
+	* So we should center the caption, if it exists.
+	* Crazy, but true.
+	*/
+	&.img-none {
+
+		figcaption {
+			text-align: center;
+		}
+
+	}
+}

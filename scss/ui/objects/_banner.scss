@@ -1,0 +1,29 @@
+
+/* ==========================================================================
+    BANNER
+   ========================================================================== */
+
+.banner-row {
+
+	background: url(../images/tundra.jpg) center center;
+	background-size: cover;
+	padding: $double-spacing-unit $single-spacing-unit;
+
+	h1,
+	h2 {
+		color: #fff;
+	}
+
+	/* The download button */
+	.download {
+		@extend .btn;
+		@extend .btn-success;
+	}
+
+	@include media-query(lap) {
+		padding: $double-spacing-unit*1.5 $single-spacing-unit;
+	}
+}
+
+
+
