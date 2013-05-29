@@ -13,7 +13,8 @@
 		}
 	}
 
-	.header-row {
+	.header-row,
+	.credit-row {
 		padding-bottom: $single-spacing-unit;
 	}
 	/* Then de-bork the header and credit rows! */

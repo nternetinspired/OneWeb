@@ -1259,7 +1259,8 @@ abbr {
     [class*="-row"] {
       padding: 3.236em 1.618em 1.618em; } }
 
-.header-row {
+.header-row,
+.credit-row {
   padding-bottom: 1.618em; }
 
 /* Then de-bork the header and credit rows! */
