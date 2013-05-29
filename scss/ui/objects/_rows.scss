@@ -3,10 +3,10 @@
 	ROW STYLES
    ========================================================================== */
 
-/* Give selected content rows some breathing space */
+/* Give selected content rows some breathing space *
 @include media-query(portable) {
-	.above-row .content,
 	.main-row .content {
 			padding: $single-spacing-unit 0;
 		}
 }
+*/

@@ -6,6 +6,7 @@
 /* Make each module a grid item */
 .below-row 	{
 
+	background: $brand-background;
 	border-top: 1px solid $brand-border;
 	/* Offset the content container as we're padding the grid items */
 	.content {
@@ -22,7 +23,6 @@
 		/* And give it a width on larger screens */
 		@include media-query(lap) {
 			@extend .lap-one-half;
-			margin-bottom: 0;
 			padding-left: $single-spacing-unit;
 		}
 		@include media-query(portable) {

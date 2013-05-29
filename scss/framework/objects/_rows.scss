@@ -6,7 +6,14 @@
 
 	/* Gives the sections some breathing space */
 	[class*="-row"] {
-		padding: $single-spacing-unit;
+		padding: $double-spacing-unit $single-spacing-unit $single-spacing-unit;
+	}
+
+	/* Then de-bork the header and credit rows! */
+	.header-row,
+	.breadcrumb-row,
+	.credit-row {
+		padding-top: $single-spacing-unit;
 	}
 
 }//endif

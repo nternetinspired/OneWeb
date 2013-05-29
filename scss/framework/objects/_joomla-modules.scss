@@ -6,14 +6,6 @@
 
 	.module {
 
-		/* Give modules some breating space. */
-		margin-bottom: $single-spacing-unit;
-
-		/* But remove it from the last one. */
-		&:last-child {
-			margin-bottom: 0;
-		}
-
 		/* Remove default bullets on lists inside modules */
 		ul {
 			list-style-type: none;

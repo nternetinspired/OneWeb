@@ -37,9 +37,5 @@ ul {
 
 /* Some extra space for our articles. */
 article {
-	margin-bottom: $single-spacing-unit*3;
-}
-/* remove this for the last intro article in a blog layout. */
-.intro-articles article:last-child {
-	margin-bottom: $single-spacing-unit;
+	margin-bottom: $double-spacing-unit;
 }
