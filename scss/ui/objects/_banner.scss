@@ -20,7 +20,7 @@
 	}
 
 	@include media-query(lap) {
-		padding: $double-spacing-unit*1.5 $single-spacing-unit;
+		padding: $double-spacing-unit*1.5 $single-spacing-unit $double-spacing-unit;
 	}
 }
 

@@ -6,8 +6,6 @@
 /* Make each module a grid item */
 .above-row 	{
 
-	background: $brand-background;
-	border-bottom: 1px solid $brand-border;
 	/* Offset the content container as we're padding the grid items */
 	.content {
 		@include media-query(lap) {
