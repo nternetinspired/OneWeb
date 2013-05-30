@@ -82,7 +82,9 @@ if ( !$bootBloatJS ) {
 
 #----------------------------- Inject extras into the head -----------------------------#
 // Author info to get a pretty G+ search result
-if ($googleplus != "") {
+
+// THIS WONT WORK - FIX IT BY MOVING TO INDEX !!
+if ($googleplusLink != "") {
 $doc->addCustomTag('<link rel="author" href="<?php echo htmlspecialchars($googleplus); ?>">');
 }
 // Currently the latest minified version from Google. It's smaller than the Joomla version.
