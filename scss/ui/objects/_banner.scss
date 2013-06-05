@@ -24,10 +24,19 @@
 		@extend .btn;
 	}
 
-	@include media-query(lap) {
-		padding: $double-spacing-unit*1.5 $single-spacing-unit $double-spacing-unit;
+	.content {
+		@include transition(padding .3s ease);
+
+		@include media-query(lap) {
+			padding: $single-spacing-unit*1.5 0 $half-spacing-unit;
+		}
+
+		@include media-query(desk) {
+			padding: $single-spacing-unit*2 0 $single-spacing-unit;
+		}
+
+		@include media-query(desk-wide) {
+			padding: $single-spacing-unit*3 0 $double-spacing-unit;
+		}
 	}
 }
-
-
-
