@@ -4,18 +4,30 @@
     ROWS
    ========================================================================== */
 
-	/* Gives the sections some breathing space */
+	/* Gives the content sections some breathing space */
 	[class*="-row"] {
-		padding: $single-spacing-unit $single-spacing-unit 0;
 		@include transition(padding .3s ease);
-		@include media-query(desk) {
-			padding: $double-spacing-unit $single-spacing-unit $single-spacing-unit;
+		padding: 0 $single-spacing-unit;
+
+		.content {
+			padding: $single-spacing-unit 0 0;
+
+			@include media-query(desk) {
+				padding: $single-spacing-unit*1.5 0 0;
+			}
+
+			@include media-query(desk-wide) {
+				padding: $single-spacing-unit*1.5 0 0;
+			}
 		}
+
+
 	}
 
-	.header-row,
-	.credit-row {
-		padding-bottom: $single-spacing-unit;
+	.header-row .content,
+	.breadcrumb-row .content,
+	.credit-row .content {
+		padding: $single-spacing-unit 0;
 	}
 
 }//endif

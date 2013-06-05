@@ -1252,21 +1252,27 @@ abbr {
 /* ==========================================================================
     ROWS
    ========================================================================== */
-/* Gives the sections some breathing space */
+/* Gives the content sections some breathing space */
 [class*="-row"] {
-  padding: 1.618em 1.618em 0;
   -webkit-transition: padding 0.3s ease;
   -moz-transition: padding 0.3s ease;
   -ms-transition: padding 0.3s ease;
   -o-transition: padding 0.3s ease;
-  transition: padding 0.3s ease; }
-  @media only screen and (min-width: 90em) {
-    [class*="-row"] {
-      padding: 3.236em 1.618em 1.618em; } }
+  transition: padding 0.3s ease;
+  padding: 0 1.618em; }
+  [class*="-row"] .content {
+    padding: 1.618em 0 0; }
+    @media only screen and (min-width: 90em) {
+      [class*="-row"] .content {
+        padding: 2.427em 0 0; } }
+    @media only screen and (min-width: 120em) {
+      [class*="-row"] .content {
+        padding: 2.427em 0 0; } }
 
-.header-row,
-.credit-row {
-  padding-bottom: 1.618em; }
+.header-row .content,
+.breadcrumb-row .content,
+.credit-row .content {
+  padding: 1.618em 0; }
 
 /* ==========================================================================
     WELLS
@@ -1975,13 +1981,21 @@ of adding icon classes in our markup. It's more awesome. */
 /* ==========================================================================
 	ROW STYLES
    ========================================================================== */
-/* De-bork the header and credit rows! */
-@media only screen and (min-width: 90em) {
-  .header-row,
-  .breadcrumb-row,
-  .credit-row {
-    padding-top: 1.618em; } }
+/* De-bork the header and credit rows!
+.header-row,
+.breadcrumb-row,
+.credit-row {
 
+	@include media-query(desk) {
+		padding-top: $single-spacing-unit;
+	}
+*/
+/* not needed?
+	.header-row,
+	.credit-row {
+		padding-bottom: $single-spacing-unit;
+	}
+*/
 /* ==========================================================================
     HEADER
    ========================================================================== */
