@@ -1254,7 +1254,12 @@ abbr {
    ========================================================================== */
 /* Gives the sections some breathing space */
 [class*="-row"] {
-  padding: 1.618em 1.618em 0; }
+  padding: 1.618em 1.618em 0;
+  -webkit-transition: padding 0.3s ease;
+  -moz-transition: padding 0.3s ease;
+  -ms-transition: padding 0.3s ease;
+  -o-transition: padding 0.3s ease;
+  transition: padding 0.3s ease; }
   @media only screen and (min-width: 90em) {
     [class*="-row"] {
       padding: 3.236em 1.618em 1.618em; } }
@@ -1262,13 +1267,6 @@ abbr {
 .header-row,
 .credit-row {
   padding-bottom: 1.618em; }
-
-/* Then de-bork the header and credit rows! */
-@media only screen and (min-width: 90em) {
-  .header-row,
-  .breadcrumb-row,
-  .credit-row {
-    padding-top: 1.618em; } }
 
 /* ==========================================================================
     WELLS
@@ -1977,13 +1975,13 @@ of adding icon classes in our markup. It's more awesome. */
 /* ==========================================================================
 	ROW STYLES
    ========================================================================== */
-/* Give selected content rows some breathing space *
-@include media-query(portable) {
-	.main-row .content {
-			padding: $single-spacing-unit 0;
-		}
-}
-*/
+/* De-bork the header and credit rows! */
+@media only screen and (min-width: 90em) {
+  .header-row,
+  .breadcrumb-row,
+  .credit-row {
+    padding-top: 1.618em; } }
+
 /* ==========================================================================
     HEADER
    ========================================================================== */
