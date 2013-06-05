@@ -1103,7 +1103,7 @@ abbr {
 /* ==========================================================================
     BUTTONS
    ========================================================================== */
-.btn, .banner-row .download,
+.btn, .banner-row .download-link, .banner-row .respository-link,
 [class*="btn-"] {
   background-color: #fcfcfc;
   border: 1px solid transparent;
@@ -1119,11 +1119,11 @@ abbr {
   padding: 0 1em;
   vertical-align: middle;
   white-space: nowrap; }
-  .btn:hover, .banner-row .download:hover,
+  .btn:hover, .banner-row .download-link:hover, .banner-row .respository-link:hover,
   [class*="btn-"]:hover {
     text-decoration: none;
     background-color: #efefef; }
-  .btn:active, .banner-row .download:active, .btn:focus, .banner-row .download:focus,
+  .btn:active, .banner-row .download-link:active, .banner-row .respository-link:active, .btn:focus, .banner-row .download-link:focus, .banner-row .respository-link:focus,
   [class*="btn-"]:active,
   [class*="btn-"]:focus {
     outline: none; }
@@ -1138,10 +1138,10 @@ abbr {
   .btn-primary:hover {
     background-color: #357ebd; }
 
-.btn-success, .banner-row .download {
+.btn-success, .banner-row .download-link {
   background-color: #5cb85c;
   color: #fff; }
-  .btn-success:hover, .banner-row .download:hover {
+  .btn-success:hover, .banner-row .download-link:hover {
     background-color: #4cae4c; }
 
 .btn-danger {
@@ -1274,7 +1274,7 @@ abbr {
     WELLS
    ========================================================================== */
 .well {
-  display: inline-block;
+  display: block;
   padding: 1.618em; }
 
 /* ==========================================================================
@@ -1947,7 +1947,7 @@ you can use the generic selector below, but it's slower:
 /*
  * Let's add some template-specific style to these babies!
  */
-.btn, .banner-row .download {
+.btn, .banner-row .download-link, .banner-row .respository-link {
   font-weight: 400; }
 
 /* ==========================================================================
@@ -2025,7 +2025,8 @@ of adding icon classes in our markup. It's more awesome. */
 .banner-row {
   background: url(../images/tundra.jpg) center center;
   background-size: cover;
-  /* The download button */ }
+  /* The download button */
+  /* The GitHub button */ }
   .banner-row h1,
   .banner-row h2 {
     color: #fff; }

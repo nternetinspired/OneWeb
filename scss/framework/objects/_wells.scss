@@ -6,7 +6,7 @@
 
 	.well {
 		@extend .clearfix;
-	    display: inline-block;
+	    display: block;
 	    padding: $single-spacing-unit;
 	}
 

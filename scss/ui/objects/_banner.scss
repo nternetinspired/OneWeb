@@ -14,9 +14,14 @@
 	}
 
 	/* The download button */
-	.download {
+	.download-link {
 		@extend .btn;
 		@extend .btn-success;
+	}
+
+	/* The GitHub button */
+	.respository-link {
+		@extend .btn;
 	}
 
 	@include media-query(lap) {
