@@ -14,9 +14,12 @@
  *
  * To reverse this pattern, simply use .media-object-right.
  */
-    .media,
-    .media-content {
-        @extend .clearfix;
+    .media {
+        margin-bottom: $single-spacing-unit;
+
+        &.media-content {
+            @extend .clearfix;
+        }
 
         .media-content {
             overflow: hidden;
