@@ -6,7 +6,6 @@
 // Enable any of the following by switching the variable to true.
 $use-breadcrumbs:       true;
 $use-buttons:           true;
-$use-colours:           true;
 $use-fluid-type:        true;
 $use-grid:              true;
 $use-joomla-modules:    true;
@@ -42,7 +41,7 @@ $heading-font-weight:   300;
 
 /* Sets the html background dark for a faux footer. */
 $root-background:      rgb(41,41,41);
-$body-background:      rgb(255,255,255)!default;
+$body-background:      rgb(255,255,255);
 
 
 /* ==========================================================================
