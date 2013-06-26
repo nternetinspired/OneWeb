@@ -57,9 +57,7 @@ Major sections are always preceded by 2 spaces.
 
 ### Minor sections
 
-	/*
- 	 * LOOK LIKE THIS
- 	 */
+	/* LOOK LIKE THIS */
 
 ### CSS comments
 
@@ -137,6 +135,6 @@ not
 
 ##Compiling
 
-Comments are very useful for development, but always minimise the stylesheet for production.
+Comments are very useful for development, but *always* minimise the stylesheet for production.
 
-Seriously. Minise that shit.
+Seriously, minimise that shit.
