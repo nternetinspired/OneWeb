@@ -11,7 +11,7 @@ However, Oneweb was built to be platform agnostic so it can also be used to buil
 
 *templateDetails.xml
 *logic.php (you might want to refer to this for your own head tag html)
-*the /language folder
+*the /language and /html folders
 
 ##Is Oneweb right for you?
 
