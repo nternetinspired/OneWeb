@@ -510,13 +510,10 @@ table {
     HELPER CLASSES
    ========================================================================== */
 /* Clearfix the parent of floated elements to prevent it collapsing. */
-.clearfix:before, .media:before,
-.media-content:before, .well:before, .clearfix:after, .media:after,
-.media-content:after, .well:after {
+.clearfix:before, .media.media-content:before, .well:before, .clearfix:after, .media.media-content:after, .well:after {
   content: "";
   display: table; }
-.clearfix:after, .media:after,
-.media-content:after, .well:after {
+.clearfix:after, .media.media-content:after, .well:after {
   clear: both; }
 
 /* Hide an element but leave it available to speaking browsers. */
@@ -558,12 +555,10 @@ table {
   opacity: 0.7 !important; }
 
 /* Add/remove floats */
-.float-right, .img-right, .media .media-object-right,
-.media-content .media-object-right {
+.float-right, .img-right, .media .media-object-right {
   float: right; }
 
-.float-left, .img-left, .media .media-object,
-.media-content .media-object {
+.float-left, .img-left, .media .media-object {
   float: left; }
 
 .float-none {
@@ -589,7 +584,6 @@ fieldset,
 figure,
 form,
 hgroup,
-.media,
 meter,
 ol,
 p,
@@ -675,7 +669,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Consolas, "Liberation Mono", Courier, monospace; }
+  font-family: monospace; }
 
 pre {
   background-color: #fcfcfc;
@@ -872,12 +866,10 @@ img[height] {
  * Of course, floated images typically need a margin so we extend the
  * generic floatr classes here.
  */
-.img-right, .media .media-object-right,
-.media-content .media-object-right {
+.img-right, .media .media-object-right {
   margin-left: 1.618em; }
 
-.img-left, .media .media-object,
-.media-content .media-object {
+.img-left, .media .media-object {
   margin-right: 1.618em; }
 
 .img-center, .img-none img {
@@ -1104,7 +1096,11 @@ abbr {
     BUTTONS
    ========================================================================== */
 .btn, .banner-row .download-link, .banner-row .respository-link,
-[class*="btn-"] {
+.btn-primary,
+.btn-success,
+.banner-row .download-link,
+.btn-danger,
+.btn-info {
   background-color: #fcfcfc;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -1120,16 +1116,25 @@ abbr {
   vertical-align: middle;
   white-space: nowrap; }
   .btn:hover, .banner-row .download-link:hover, .banner-row .respository-link:hover,
-  [class*="btn-"]:hover {
+  .btn-primary:hover,
+  .btn-success:hover,
+  .banner-row .download-link:hover,
+  .btn-danger:hover,
+  .btn-info:hover {
     text-decoration: none;
     background-color: #efefef; }
   .btn:active, .banner-row .download-link:active, .banner-row .respository-link:active, .btn:focus, .banner-row .download-link:focus, .banner-row .respository-link:focus,
-  [class*="btn-"]:active,
-  [class*="btn-"]:focus {
+  .btn-primary:active,
+  .btn-primary:focus,
+  .btn-success:active,
+  .banner-row .download-link:active,
+  .btn-success:focus,
+  .banner-row .download-link:focus,
+  .btn-danger:active,
+  .btn-danger:focus,
+  .btn-info:active,
+  .btn-info:focus {
     outline: none; }
-
-[class*="btn-"]:hover {
-  color: #fff; }
 
 /* BUTTON COLOURS */
 .btn-primary {
@@ -1178,11 +1183,36 @@ abbr {
 /* ==========================================================================
     LABELS
    ========================================================================== */
-[class*="label"] {
+.label,
+.label-primary,
+.label-success,
+.label-danger,
+.label-info {
   padding: .125em .25em;
   text-align: center;
   background-color: #fcfcfc;
   border-radius: 3px; }
+
+/* LABEL COLOURS */
+.label-primary {
+  background-color: #428bca;
+  color: #fff; }
+
+.label-success {
+  background-color: #5cb85c;
+  color: #fff; }
+
+.label-danger {
+  background-color: #d9534f;
+  color: #fff; }
+
+.label-info {
+  background-color: #5bc0de;
+  color: #fff; }
+
+.label-warning {
+  background-color: #f0ad4e;
+  color: #fff; }
 
 /* ==========================================================================
     MEDIA
@@ -1197,15 +1227,14 @@ abbr {
  *
  * To reverse this pattern, simply use .media-object-right.
  */
-.media .media-content,
-.media-content .media-content {
-  overflow: hidden; }
-  .media .media-content:last-child,
-  .media-content .media-content:last-child {
-    margin-bottom: 0; }
-.media .media-object-right,
-.media-content .media-object-right {
-  margin-right: 0; }
+.media {
+  margin-bottom: 1.618em; }
+  .media .media-content {
+    overflow: hidden; }
+    .media .media-content:last-child {
+      margin-bottom: 0; }
+  .media .media-object-right {
+    margin-right: 0; }
 
 /* ==========================================================================
     JOOMLA MODULES
@@ -1219,11 +1248,11 @@ abbr {
     NAVIGATION
    ========================================================================== */
 /* Remove list styles and throw child elements into a horizontal list. */
-.nav, .breadcrumb, .pagination ul, .pagenav, .actions, .social {
+.nav, .breadcrumb, .pagination ul, .pagenav, .social, .actions {
   list-style: none; }
-  .nav li, .breadcrumb li, .pagination ul li, .pagenav li, .actions li, .social li {
+  .nav li, .breadcrumb li, .pagination ul li, .pagenav li, .social li, .actions li {
     display: inline-block; }
-    .nav li a, .breadcrumb li a, .pagination ul li a, .pagenav li a, .actions li a, .social li a {
+    .nav li a, .breadcrumb li a, .pagination ul li a, .pagenav li a, .social li a, .actions li a {
       padding: 0.20225em; }
 
 /* Creates a vertical list of blocky, finger-friendly, links. */
@@ -1269,11 +1298,6 @@ abbr {
       [class*="-row"] .content {
         padding: 3.236em 0 1.618em; } }
 
-.header-row .content,
-.breadcrumb-row .content,
-.credit-row .content {
-  padding: 1.618em 0; }
-
 /* ==========================================================================
     WELLS
    ========================================================================== */
@@ -1292,40 +1316,11 @@ abbr {
  * These following need to override some base element styles,
  * so we'll load them last.
  */
-/* Override default styles for buttons, badges and labels. */
-/* ==========================================================================
-    COLOURS
-   ========================================================================== */
-/*
- * Bootstrap's UI colours all follow a predictable naming convention, so we
- * can colour buttons, labels, badges, etc. in one hit with the following
- * selectors. Nice.
- */
-[class*="-primary"] {
-  background-color: #428bca;
-  color: #fff; }
-
-[class*="-success"] {
-  background-color: #5cb85c;
-  color: #fff; }
-
-[class*="-danger"] {
-  background-color: #d9534f;
-  color: #fff; }
-
-[class*="-info"] {
-  background-color: #5bc0de;
-  color: #fff; }
-
-[class*="-warning"] {
-  background-color: #f0ad4e;
-  color: #fff; }
-
 /* Override any defaults like display: block on objects. */
 /* ==========================================================================
     GRID
    ========================================================================== */
-.grid-item, .logo, [role="navigation"], .above-row .module, .below-row .module, .footer-row .module, .social, .copyright {
+.grid-item, .logo, [role="navigation"], .footer-row .module, .social, .copyright, .above-row .module, .below-row .module {
   display: inline-block;
   margin-right: -.25em;
   width: 100%;
@@ -1522,11 +1517,11 @@ abbr {
     width: 100%; }
 
   /* Halves */
-  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths, .below-row .module, .footer-row .module {
+  .lap-one-half, .lap-two-quarters, .lap-three-sixths, .lap-four-eighths, .lap-five-tenths, .lap-six-twelfths, .footer-row .module, .below-row .module {
     width: 50%; }
 
   /* Thirds */
-  .lap-one-third, .lap-two-sixths, .lap-four-twelfths, .above-row .module, .copyright {
+  .lap-one-third, .lap-two-sixths, .lap-four-twelfths, .copyright, .above-row .module {
     width: 33.333%; }
 
   .lap-two-thirds, .lap-four-sixths, .lap-eight-twelfths, .social {
@@ -1979,6 +1974,15 @@ of adding icon classes in our markup. It's more awesome. */
 }
 */
 /* ==========================================================================
+    ROWS
+   ========================================================================== */
+/* Make some adjustments for special rows */
+.header-row .content,
+.breadcrumb-row .content,
+.credit-row .content {
+  padding: 1.618em 0; }
+
+/* ==========================================================================
     HEADER
    ========================================================================== */
 .header-row {
@@ -2041,6 +2045,54 @@ of adding icon classes in our markup. It's more awesome. */
         padding: 4.854em 0 3.236em; } }
 
 /* ==========================================================================
+    FOOTER
+   ========================================================================== */
+.footer-row {
+  background: #cd6e57;
+  /* Offset the content container as we're padding the grid items */
+  /* Make each module a grid item */ }
+  @media only screen and (min-width: 45em) {
+    .footer-row .content {
+      margin-left: -3.236em; } }
+  .footer-row .module {
+    /* And give it a width on larger screens */ }
+    @media only screen and (min-width: 45em) {
+      .footer-row .module {
+        margin-bottom: 0;
+        padding-left: 3.236em; } }
+
+[role="contentinfo"] blockquote {
+  border: none;
+  margin: 0;
+  padding: 0; }
+[role="contentinfo"] img {
+  -webkit-box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
+  -moz-box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
+  box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
+  height: 60px;
+  border-radius: 100%; }
+[role="contentinfo"] a {
+  color: #fff; }
+
+.credit-row {
+  background: #353535;
+  text-align: center;
+  color: #fff; }
+
+/* social icons */
+@media only screen and (min-width: 45em) {
+  .social {
+    margin-bottom: 0;
+    text-align: left; } }
+
+/* social icons */
+.copyright {
+  font-weight: 400; }
+  @media only screen and (min-width: 45em) {
+    .copyright {
+      text-align: right; } }
+
+/* ==========================================================================
     ARTICLE ACTIONS
    ========================================================================== */
 /* The print / mail /edit links */
@@ -2095,51 +2147,3 @@ of adding icon classes in our markup. It's more awesome. */
     @media only screen and (min-width: 45em) {
       .below-row .module {
         padding-left: 1.618em; } }
-
-/* ==========================================================================
-    FOOTER
-   ========================================================================== */
-.footer-row {
-  background: #cd6e57;
-  /* Offset the content container as we're padding the grid items */
-  /* Make each module a grid item */ }
-  @media only screen and (min-width: 45em) {
-    .footer-row .content {
-      margin-left: -3.236em; } }
-  .footer-row .module {
-    /* And give it a width on larger screens */ }
-    @media only screen and (min-width: 45em) {
-      .footer-row .module {
-        margin-bottom: 0;
-        padding-left: 3.236em; } }
-
-[role="contentinfo"] blockquote {
-  border: none;
-  margin: 0;
-  padding: 0; }
-[role="contentinfo"] img {
-  -webkit-box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
-  -moz-box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
-  box-shadow: 0 1px 0px 1px rgba(255, 255, 255, 0.25);
-  height: 60px;
-  border-radius: 100%; }
-[role="contentinfo"] a {
-  color: #fff; }
-
-.credit-row {
-  background: #353535;
-  text-align: center;
-  color: #fff; }
-
-/* social icons */
-@media only screen and (min-width: 45em) {
-  .social {
-    margin-bottom: 0;
-    text-align: left; } }
-
-/* social icons */
-.copyright {
-  font-weight: 400; }
-  @media only screen and (min-width: 45em) {
-    .copyright {
-      text-align: right; } }
