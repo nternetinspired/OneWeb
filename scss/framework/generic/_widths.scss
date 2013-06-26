@@ -114,8 +114,8 @@
         @include grid-setup("desk-");
     }
 
-    @include media-query(desk-wide) {
-        @include grid-setup("desk-wide");
+    @include media-query(deskwide) {
+        @include grid-setup("deskwide-");
     }
 
 }//endif

@@ -658,9 +658,6 @@ body {
 @media only screen and (min-width: 90em) {
   html {
     font-size: 106.3%; } }
-@media only screen and (min-width: 120em) {
-  html {
-    font-size: 112.5%; } }
 
 /* ==========================================================================
    	CODE
@@ -1294,9 +1291,6 @@ abbr {
     @media only screen and (min-width: 90em) {
       [class*="-row"] .content {
         padding: 2.427em 0 0.809em; } }
-    @media only screen and (min-width: 120em) {
-      [class*="-row"] .content {
-        padding: 3.236em 0 1.618em; } }
 
 /* ==========================================================================
     WELLS
@@ -1756,84 +1750,84 @@ abbr {
     width: 91.666%; } }
 @media only screen and (min-width: 120em) {
   /* Whole */
-  .desk-wideone-whole {
+  .deskwide-one-whole {
     width: 100%; }
 
   /* Halves */
-  .desk-wideone-half, .desk-widetwo-quarters, .desk-widethree-sixths, .desk-widefour-eighths, .desk-widefive-tenths, .desk-widesix-twelfths {
+  .deskwide-one-half, .deskwide-two-quarters, .deskwide-three-sixths, .deskwide-four-eighths, .deskwide-five-tenths, .deskwide-six-twelfths {
     width: 50%; }
 
   /* Thirds */
-  .desk-wideone-third, .desk-widetwo-sixths, .desk-widefour-twelfths {
+  .deskwide-one-third, .deskwide-two-sixths, .deskwide-four-twelfths {
     width: 33.333%; }
 
-  .desk-widetwo-thirds, .desk-widefour-sixths, .desk-wideeight-twelfths {
+  .deskwide-two-thirds, .deskwide-four-sixths, .deskwide-eight-twelfths {
     width: 66.666%; }
 
   /* Quarters */
-  .desk-wideone-quarter, .desk-widetwo-eighths, .desk-widethree-twelfths {
+  .deskwide-one-quarter, .deskwide-two-eighths, .deskwide-three-twelfths {
     width: 25%; }
 
-  .desk-widethree-quarters, .desk-widesix-eighths, .desk-widenine-twelfths {
+  .deskwide-three-quarters, .deskwide-six-eighths, .deskwide-nine-twelfths {
     width: 75%; }
 
   /* Fifths */
-  .desk-wideone-fifth, .desk-widetwo-tenths {
+  .deskwide-one-fifth, .deskwide-two-tenths {
     width: 20%; }
 
-  .desk-widetwo-fifths, .desk-widefour-tenths {
+  .deskwide-two-fifths, .deskwide-four-tenths {
     width: 40%; }
 
-  .desk-widethree-fifths, .desk-widesix-tenths {
+  .deskwide-three-fifths, .deskwide-six-tenths {
     width: 60%; }
 
-  .desk-widefour-fifths, .desk-wideeight-tenths {
+  .deskwide-four-fifths, .deskwide-eight-tenths {
     width: 80%; }
 
   /* Sixths */
-  .desk-wideone-sixth, .desk-widetwo-twelfths {
+  .deskwide-one-sixth, .deskwide-two-twelfths {
     width: 16.666%; }
 
-  .desk-widefive-sixths, .desk-wideten-twelfths {
+  .deskwide-five-sixths, .deskwide-ten-twelfths {
     width: 83.333%; }
 
   /* Eighths */
-  .desk-wideone-eighth {
+  .deskwide-one-eighth {
     width: 12.5%; }
 
-  .desk-widethree-eighths {
+  .deskwide-three-eighths {
     width: 37.5%; }
 
-  .desk-widefive-eighths {
+  .deskwide-five-eighths {
     width: 62.5%; }
 
-  .desk-wideseven-eighths {
+  .deskwide-seven-eighths {
     width: 87.5%; }
 
   /* Tenths */
-  .desk-wideone-tenth {
+  .deskwide-one-tenth {
     width: 10%; }
 
-  .desk-widethree-tenths {
+  .deskwide-three-tenths {
     width: 30%; }
 
-  .desk-wideseven-tenths {
+  .deskwide-seven-tenths {
     width: 70%; }
 
-  .desk-widenine-tenths {
+  .deskwide-nine-tenths {
     width: 90%; }
 
   /* Twelfths */
-  .desk-wideone-twelfth {
+  .deskwide-one-twelfth {
     width: 8.333%; }
 
-  .desk-widefive-twelfths {
+  .deskwide-five-twelfths {
     width: 41.666%; }
 
-  .desk-wideseven-twelfths {
+  .deskwide-seven-twelfths {
     width: 58.333%; }
 
-  .desk-wideeleven-twelfths {
+  .deskwide-eleven-twelfths {
     width: 91.666%; } }
 /* Next up, the template UI! */
 /* ==========================================================================
@@ -2040,9 +2034,6 @@ of adding icon classes in our markup. It's more awesome. */
     @media only screen and (min-width: 90em) {
       .banner-row .content {
         padding: 3.236em 0 1.618em; } }
-    @media only screen and (min-width: 120em) {
-      .banner-row .content {
-        padding: 4.854em 0 3.236em; } }
 
 /* ==========================================================================
     FOOTER

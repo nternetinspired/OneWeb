@@ -129,8 +129,8 @@
         }
     }
 
-    @if $media-query == desk-wide {
-        @media only screen and (min-width: $desk-wide) {
+    @if $media-query == deskwide {
+        @media only screen and (min-width: $deskwide) {
             @content;
         }
     }
