@@ -17,9 +17,9 @@
     DEFAULT FONT STACKS
    ========================================================================== */
 
-$sans-font-family:      Helvetica, "Helvetica Neue", sans-serif!default;
-$serif-font-family:     "Adobe Caslon Pro", Baskerville, Georgia, serif!default;
-$code-font-family:      Consolas, "Liberation Mono", Courier, monospace!default;
+$sans-font-family:      sans-serif!default;
+$serif-font-family:     serif!default;
+$code-font-family:      monospace!default;
 
 /* ==========================================================================
     ROOT RULES
@@ -45,9 +45,9 @@ $root-background:       rgb(255,255,255)!default;
 $body-background:       rgb(255,255,255)!default;
 
 /* Spacing units derived from line-height; they scale with root-font-size. */
-$single-spacing-unit:   ($root-line-height / $root-font-size) * (100em);
-$half-spacing-unit:     ($root-line-height / $root-font-size) * (50em);
-$double-spacing-unit:   ($root-line-height / $root-font-size) * (200em);
+$single-spacing-unit:   ($root-line-height / $root-font-size) * (100em)!default;
+$half-spacing-unit:     ($root-line-height / $root-font-size) * (50em)!default;
+$double-spacing-unit:   ($root-line-height / $root-font-size) * (200em)!default;
 
 /* Constrain content widths to maintain an optimal measure (line-length). */
 $wrapper-max-width:     45em!default;
@@ -65,18 +65,18 @@ $brand-background:      rgb(252,252,252)!default;
 $brand-border:          rgb(238,238,238)!default;
 
 /* Link colours. */
-$link-color: 			$brand-color;
-$link-hover-color: 		darken($brand-color, 10%);
+$link-color: 			      $brand-color!default;
+$link-hover-color: 		  darken($brand-color, 10%)!default;
 
 /* The default size of rounded corners. */
 $brand-radius:          3px!default;
 
 /* UI elements colours, used in badges, buttons, labels, etc. */
-$brand-danger:          #d9534f;
-$brand-info:            #5bc0de;
-$brand-primary:         #428bca;
-$brand-success:         #5cb85c;
-$brand-warning:         #f0ad4e;
+$brand-danger:          #d9534f!default;
+$brand-info:            #5bc0de!default;
+$brand-primary:         #428bca!default;
+$brand-success:         #5cb85c!default;
+$brand-warning:         #f0ad4e!default;
 
 
 /* ==========================================================================
@@ -137,7 +137,6 @@ $desk-wide:             120em!default;
 /* The following modules can be enabled in ui/_variables.scss if required. */
 $use-breadcrumbs:       false!default;
 $use-buttons:           false!default;
-$use-colours:           false!default;
 $use-fluid-type:        false!default;
 $use-grid:              false!default;
 $use-joomla-modules:    false!default;
