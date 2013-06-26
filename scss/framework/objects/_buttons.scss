@@ -4,7 +4,10 @@
     BUTTONS
    ========================================================================== */
     .btn,
-    [class*="btn-"] {
+    .btn-primary,
+    .btn-success,
+    .btn-danger,
+    .btn-info {
         background-color: $brand-background;
         border: 1px solid transparent;
         border-radius: $brand-radius;
@@ -28,12 +31,6 @@
         &:active,
         &:focus {
             outline: none;
-        }
-    }
-
-    [class*="btn-"] {
-        &:hover {
-            color: #fff;
         }
     }
 
