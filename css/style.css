@@ -578,6 +578,7 @@ table {
  * the font-size.
  */
 address,
+article,
 blockquote,
 dl,
 fieldset,
@@ -596,10 +597,6 @@ textarea,
 ul {
   margin-top: 0;
   margin-bottom: 1.618em; }
-
-/* Some extra space for our articles. */
-article {
-  margin-bottom: 3.236em; }
 
 /*
  * The following rules contain generic styles of the type applicable primarily
