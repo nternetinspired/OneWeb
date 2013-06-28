@@ -35,9 +35,20 @@
     }
 
     /* BUTTON COLOURS */
+    .btn-primary,
+    .btn-success,
+    .btn-danger,
+    .btn-info {
+
+        color: #fff;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
     .btn-primary {
         background-color: $brand-primary;
-        color: #fff;
 
         &:hover {
             background-color: darken($brand-primary, 5%);
@@ -46,7 +57,6 @@
 
     .btn-success {
         background-color: $brand-success;
-        color: #fff;
 
         &:hover {
             background-color: darken($brand-success, 5%);
@@ -55,7 +65,6 @@
 
     .btn-danger {
         background-color: $brand-danger;
-        color: #fff;
 
         &:hover {
             background-color: darken($brand-danger, 5%);
@@ -63,7 +72,6 @@
     }
     .btn-info {
         background-color: $brand-info;
-        color: #fff;
 
         &:hover {
             background-color: darken($brand-info, 5%);
@@ -71,7 +79,6 @@
     }
     .btn-warning {
         background-color: $brand-warning;
-        color: #fff;
 
         &:hover {
             background-color: darken($brand-warning, 5%);
