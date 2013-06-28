@@ -1134,33 +1134,41 @@ abbr {
     outline: none; }
 
 /* BUTTON COLOURS */
-.btn-primary {
-  background-color: #428bca;
+.btn-primary,
+.btn-success,
+.banner-row .download-link,
+.btn-danger,
+.btn-info {
   color: #fff; }
+  .btn-primary:hover,
+  .btn-success:hover,
+  .banner-row .download-link:hover,
+  .btn-danger:hover,
+  .btn-info:hover {
+    color: #fff; }
+
+.btn-primary {
+  background-color: #428bca; }
   .btn-primary:hover {
     background-color: #357ebd; }
 
 .btn-success, .banner-row .download-link {
-  background-color: #5cb85c;
-  color: #fff; }
+  background-color: #5cb85c; }
   .btn-success:hover, .banner-row .download-link:hover {
     background-color: #4cae4c; }
 
 .btn-danger {
-  background-color: #d9534f;
-  color: #fff; }
+  background-color: #d9534f; }
   .btn-danger:hover {
     background-color: #d43f3a; }
 
 .btn-info {
-  background-color: #5bc0de;
-  color: #fff; }
+  background-color: #5bc0de; }
   .btn-info:hover {
     background-color: #46b8da; }
 
 .btn-warning {
-  background-color: #f0ad4e;
-  color: #fff; }
+  background-color: #f0ad4e; }
   .btn-warning:hover {
     background-color: #eea236; }
 
@@ -1250,6 +1258,7 @@ abbr {
   .nav li, .breadcrumb li, .pagination ul li, .pagenav li, .social li, .actions li {
     display: inline-block; }
     .nav li a, .breadcrumb li a, .pagination ul li a, .pagenav li a, .social li a, .actions li a {
+      display: block;
       padding: 0.20225em; }
 
 /* Creates a vertical list of blocky, finger-friendly, links. */
