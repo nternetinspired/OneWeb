@@ -18,6 +18,7 @@
 			margin: 0 $half-spacing-unit / 4;
 			// Inception rule!! Check the fucking output of this!
 			a {
+				display: block;
 				padding: $half-spacing-unit / 2;
 			}
 		}

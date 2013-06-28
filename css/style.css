@@ -1261,7 +1261,6 @@ abbr {
   .nav li, .breadcrumb li, .pagination ul li, .pagenav li, .social li, .actions li {
     display: inline-block; }
     .nav li a, .breadcrumb li a, .pagination ul li a, .pagenav li a, .social li a, .actions li a {
-      display: block;
       padding: 0.20225em; }
 
 /* Creates a vertical list of blocky, finger-friendly, links. */
@@ -2017,6 +2016,7 @@ of adding icon classes in our markup. It's more awesome. */
     [role="navigation"] ul > li {
       margin: 0 0.20225em; }
       [role="navigation"] ul > li a {
+        display: block;
         padding: 0.4045em; }
   @media only screen and (min-width: 45em) {
     [role="navigation"] {
