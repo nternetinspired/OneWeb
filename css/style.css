@@ -1094,7 +1094,8 @@ abbr {
 .btn-success,
 .banner-row .download-link,
 .btn-danger,
-.btn-info {
+.btn-info,
+.btn-warning {
   background-color: #fcfcfc;
   border: 1px solid transparent;
   border-radius: 3px;
@@ -1114,7 +1115,8 @@ abbr {
   .btn-success:hover,
   .banner-row .download-link:hover,
   .btn-danger:hover,
-  .btn-info:hover {
+  .btn-info:hover,
+  .btn-warning:hover {
     text-decoration: none;
     background-color: #efefef; }
   .btn:active, .banner-row .download-link:active, .banner-row .respository-link:active, .btn:focus, .banner-row .download-link:focus, .banner-row .respository-link:focus,
@@ -1127,7 +1129,9 @@ abbr {
   .btn-danger:active,
   .btn-danger:focus,
   .btn-info:active,
-  .btn-info:focus {
+  .btn-info:focus,
+  .btn-warning:active,
+  .btn-warning:focus {
     outline: none; }
 
 /* BUTTON COLOURS */
@@ -1135,13 +1139,15 @@ abbr {
 .btn-success,
 .banner-row .download-link,
 .btn-danger,
-.btn-info {
+.btn-info,
+.btn-warning {
   color: #fff; }
   .btn-primary:hover,
   .btn-success:hover,
   .banner-row .download-link:hover,
   .btn-danger:hover,
-  .btn-info:hover {
+  .btn-info:hover,
+  .btn-warning:hover {
     color: #fff; }
 
 .btn-primary {
