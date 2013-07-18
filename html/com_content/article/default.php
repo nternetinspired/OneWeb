@@ -150,7 +150,7 @@ if (!empty($this->item->pagination) AND $this->item->pagination && !$this->item-
 		echo $this->item->toc;
 	endif; ?>
 	<div class="article-body">
-	<?php echo $this->item->text; ?>
+		<?php echo $this->item->text; ?>
 	</div>
 	<?php if ($info == 1 OR $info == 2) : ?>
 		<footer class="article-meta">
