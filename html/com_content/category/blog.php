@@ -22,8 +22,8 @@ JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 			<span class="subheading-category"><?php echo $this->category->title;?></span>
 			<?php endif; ?>
 		</h2>
-		<?php endif; ?>
 	</header>
+	<?php endif; ?>
 	<?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>
 	<section class="category-desc">
 		<?php if ($this->params->get('show_description_image') && $this->category->getParams()->get('image')) : ?>

@@ -201,7 +201,7 @@ $info    = $this->item->params->get('info_block_position', 0);
 				endif; ?>
 			</a>
 		<?php endif; ?>
-	<div>
+	</div>
 </article>
 <?php if ($this->item->state == 0) : ?>
 </div>
