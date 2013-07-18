@@ -17,9 +17,9 @@ function modChrome_gangnam($module, &$params, &$attribs)
     <div class="module<?php echo $params->get('moduleclass_sfx'); ?> module-<?php echo $module->id; ?>">
 		<div class="module-inner">
             <?php if ($module->showtitle) : ?>
-            <header>
+            <div class="module-header">
                     <h<?php echo $headerLevel; ?>><?php echo $module->title; ?></h<?php echo $headerLevel; ?>>
-    		</header>
+    		</div>
             <?php endif; ?>
             <?php echo $module->content; ?>
         </div>
