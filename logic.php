@@ -81,12 +81,6 @@ if ( !$bootBloatJS ) {
 }
 
 #----------------------------- Inject extras into the head -----------------------------#
-// Author info to get a pretty G+ search result
-
-// THIS WONT WORK - FIX IT BY MOVING TO INDEX !!
-if ($googleplusLink != "") {
-$doc->addCustomTag('<link rel="author" href="<?php echo htmlspecialchars($googleplus); ?>">');
-}
 // Currently the latest minified version from Google. It's smaller than the Joomla version.
 if ($jQuery) {
   $doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jquery-1.8.2.min.js');
@@ -107,6 +101,6 @@ $doc->setMetaData( 'MobileOptimized', '320' );
 // This lets mobile devices know we have thought about them
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1.0' );
 // Kick IE out of compatibility mode and disable it
-$doc->setMetaData( 'X-UA-Compatible', 'IE=edge;chrome=1' );
+//$doc->setMetaData( 'X-UA-Compatible', 'IE=edge;chrome=1' );
 // For Win mobile
-$doc->setMetaData( 'cleartype', 'on');
+//$doc->setMetaData( 'cleartype', 'on');
