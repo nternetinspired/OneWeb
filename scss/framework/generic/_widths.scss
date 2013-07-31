@@ -98,8 +98,8 @@
 // This mixin generates namespaced width declarations at our breakpoints,
 // so that widths can be defined at each breakpoint. For example:
 // <div class="lap-one-half  desk-one-quarter"> ... </div>
-    @include media-query(hand) {
-        @include grid-setup("hand-");
+    @include media-query(palm) {
+        @include grid-setup("palm-");
     }
 
     @include media-query(lap) {
