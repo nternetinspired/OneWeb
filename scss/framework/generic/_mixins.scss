@@ -105,8 +105,8 @@
 
 @mixin media-query($media-query) {
 
-    @if $media-query == palm {
-        @media only screen and (min-width: $palm) {
+    @if $media-query == hand {
+        @media only screen and (min-width: $hand) {
             @content;
         }
     }
