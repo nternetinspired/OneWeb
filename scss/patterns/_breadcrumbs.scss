@@ -5,7 +5,7 @@
 
 .breadcrumb {
     @extend .nav;
-    font-size: 0.813em;
+    @extend .milli;
     margin-bottom: 0;
 
     > li + li:before {
