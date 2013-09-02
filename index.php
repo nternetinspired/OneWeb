@@ -2,7 +2,7 @@
 /* =====================================================================
 Template:	OneWeb for Joomla
 Author: 	Seth Warburton - Internet Inspired! - @nternetinspired
-Version: 	3.0
+Version: 	4.0
 Created: 	April 2013
 Copyright:	Seth Warburton - (C) 2013 - All rights reserved
 Licenses:	GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
