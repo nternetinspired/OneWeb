@@ -3,7 +3,19 @@
     CONTENT WRAPPER
    ========================================================================== */
 
-.wrapper {
+%wrapper { // Define this seperately, allowing re-use
+
     margin: 0 auto;
     max-width: $wrapper-width;
+
+}
+
+// Apply the wrapper to our content areas
+[class*="-row"] {
+
+	> [role],
+	> section {
+		@extend %wrapper;
+	}
+
 }
