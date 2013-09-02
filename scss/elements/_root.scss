@@ -1,0 +1,50 @@
+
+/* ==========================================================================
+    ROOT
+   ========================================================================== */
+
+/*
+ * Border-box *all the things*, as suggested in:
+ * http:// paulirish.com/2012/box-sizing-border-box-ftw
+ */
+
+* {
+    &,
+    &:before,
+    &:after {
+        @include box-sizing;
+    }
+}
+
+
+/* Define the root element styles. */
+html {
+    font: #{$root-size}%/#{$root-lineheight} $root-family;
+    font-weight: $root-weight;
+    background-color: $root-background;
+    color: $root-color;
+    min-height: 100%;
+    overflow-y: scroll;
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+
+/* Style the body element styles. */
+body {
+	@include hyphens;
+    background-color: $body-background;
+}
+
+/* Colour selected text. */
+ ::-moz-selection {
+    background-color: $brand-color;
+    color: #fff;
+    text-shadow: none;
+}
+
+::selection {
+    background-color: $brand-color;
+    color: #fff;
+    text-shadow: none;
+}

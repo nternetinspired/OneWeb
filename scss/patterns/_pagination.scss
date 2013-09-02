@@ -1,0 +1,33 @@
+
+/* ==========================================================================
+    PAGINATION
+   ========================================================================== */
+
+/* Blog and article pagination */
+.pagination {
+    text-align:center;
+
+    ul {
+        @extend .nav;
+
+        span {
+            padding: $half-spacing-unit / 2;
+        }
+    }
+}
+
+/* Article pagination */
+.pagenav {
+    @extend .nav;
+
+    li {
+        width: 50%;
+    }
+    .previous {
+        margin-right: -.25em;
+    }
+    .next {
+        float: right;
+        text-align: right;
+    }
+}

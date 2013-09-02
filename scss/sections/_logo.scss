@@ -1,0 +1,16 @@
+
+/* ==========================================================================
+    LOGO
+   ========================================================================== */
+
+.logo {
+
+	@extend .grid-item;
+	@extend .kilo;
+
+	@include media-query(lap) {
+		@extend .lap-two-fifths;
+		//margin-bottom: 0;
+		vertical-align: middle;
+	}
+}

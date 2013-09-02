@@ -1,0 +1,39 @@
+
+/* ==========================================================================
+    LABELS
+   ========================================================================== */
+
+.label,
+.label-primary,
+.label-success,
+.label-danger,
+.label-info {
+    padding: .125em .25em;
+    text-align: center;
+    background-color: $brand-background;
+    border-radius: $brand-radius;
+}
+
+/* LABEL COLOURS */
+.label-primary {
+    background-color: $brand-primary;
+    color: #fff;
+}
+
+.label-success {
+    background-color: $brand-success;
+    color: #fff;
+}
+
+.label-danger {
+    background-color: $brand-danger;
+    color: #fff;
+}
+.label-info {
+    background-color: $brand-info;
+    color: #fff;
+}
+.label-warning {
+    background-color: $brand-warning;
+    color: #fff;
+}

@@ -1,0 +1,42 @@
+
+/* ==========================================================================
+    TABLES
+   ========================================================================== */
+
+table {
+    width:100%;
+}
+th,
+td {
+    padding: $half-spacing-unit;
+    text-align:left;
+}
+
+/* Bordered tables. */
+.table-bordered {
+
+    th,
+    td {
+        border: 1px solid $brand-border;
+
+        &:empty{
+            border:none;
+        }
+    }
+
+    thead tr:last-child th {
+        border-bottom-width: 2px;
+    }
+
+    tbody tr th:last-of-type {
+        border-right-width: 2px;
+    }
+}
+
+/* Striped tables. */
+.table-striped {
+
+    tbody tr:nth-of-type(odd) {
+        background-color: $brand-background;
+    }
+}

@@ -1,0 +1,105 @@
+
+/* ==========================================================================
+    BUTTONS
+   ========================================================================== */
+
+.btn,
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-info,
+.btn-warning {
+    background-color: $brand-background;
+    border: 1px solid transparent;
+    border-radius: $brand-radius;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 100%;
+    font-family: $button-family;
+    font-weight: 400;
+    line-height: 3;
+    margin-right: $half-spacing-unit;
+    margin-bottom: $single-spacing-unit;
+    padding: 0 1em;
+    vertical-align: middle;
+    white-space: nowrap;
+
+    &:hover {
+        text-decoration: none;
+        background-color: darken($brand-background, 5%);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}
+
+/* BUTTON COLOURS */
+.btn-primary,
+.btn-success,
+.btn-danger,
+.btn-info,
+.btn-warning {
+
+    color: #fff;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.btn-primary {
+    background-color: $brand-primary;
+
+    &:hover {
+        background-color: darken($brand-primary, 5%);
+    }
+}
+
+.btn-success {
+    background-color: $brand-success;
+
+    &:hover {
+        background-color: darken($brand-success, 5%);
+    }
+}
+
+.btn-danger {
+    background-color: $brand-danger;
+
+    &:hover {
+        background-color: darken($brand-danger, 5%);
+    }
+}
+.btn-info {
+    background-color: $brand-info;
+
+    &:hover {
+        background-color: darken($brand-info, 5%);
+    }
+}
+.btn-warning {
+    background-color: $brand-warning;
+
+    &:hover {
+        background-color: darken($brand-warning, 5%);
+    }
+}
+
+/* BUTTON SIZING */
+.btn-small {
+    line-height: 2;
+    padding: 0 0.5em;
+}
+
+.btn-large {
+    line-height: 4;
+    padding: 0 1.5em;
+}
+
+.btn-huge {
+    line-height: 5;
+    padding: 0 2em;
+}
+

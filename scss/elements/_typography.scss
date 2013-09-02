@@ -1,0 +1,96 @@
+
+/* ==========================================================================
+    TYPOGRAPHY
+   ========================================================================== */
+
+/* PARAGRAPHS */
+
+/*
+ * Numbers in paragraphs should kick it Old Skool:
+ * http://webtypography.net/Harmony_and_Counterpoint/Numerals__Capitals_and_Small_Caps/3.2.1/
+ *
+ * And, as everyone knows, all paragraphs after the first one should be indented
+ * by one en(2 x em) without a boundary, or one em with. See:
+ *
+ * http://webtypography.net/Rhythm_and_Proportion/Blocks_and_Paragraphs/2.3.2/
+ *
+ * and:
+ *
+ * http://v1.jontangerine.com/silo/typography/p/
+ */
+
+.article p {
+
+    + p {
+        text-indent: 1em;
+    }
+}
+
+/* Typically used in the first paragraph of an article, for added awesome. */
+.intro {
+    @include font-size($h4-size);
+}
+
+/* BLOCK QUOTES */
+
+/* Default margin indent is zeroed out and padded to allow styling of element. */
+blockquote {
+    margin-left: 0;
+    padding: $half-spacing-unit $single-spacing-unit*1.5;
+
+    &:before,
+    &:after {
+        content: '';
+        content: none;
+    }
+
+    p:last-of-type {
+        margin-bottom: 0;
+    }
+
+    > cite,
+    + cite {
+        margin-bottom: 0;
+    }
+}
+
+/* CITATIONS */
+cite {
+    @extend .milli;
+    display: block;
+    margin-top: $half-spacing-unit;
+
+    &:before {
+        content: "\2014";
+        margin-right: $half-spacing-unit;
+    }
+}
+
+/* INLINE QUOTES */
+q {
+    quotes: "\2018" "\2019" "#{$open-quote}" "#{$close-quote}";
+
+    &:before {
+        content: "\2018";
+        content: open-quote;
+    }
+    &:after {
+        content: "\2019";
+        content: close-quote;
+    }
+}
+
+/* ABBREVIATIONS */
+
+/*
+ * Should use small-caps and be letterspaced, obviously!
+ * http://webtypography.net/Rhythm_and_Proportion/Horizontal_Motion/2.1.6/
+ */
+abbr {
+    font-variant: small-caps;
+    letter-spacing: 0.1em;
+
+    &[title] {
+        cursor: help;
+    }
+}

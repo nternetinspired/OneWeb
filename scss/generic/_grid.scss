@@ -1,0 +1,22 @@
+
+/* ==========================================================================
+    GRID
+   ========================================================================== */
+
+.grid-item {
+    display: inline-block;
+    margin-right: -.25em;
+    width: 100%;
+    vertical-align: top;
+}
+
+// Want space between your items? Use this.
+.grid-item-padded {
+	@extend .grid-item;
+	padding-left: $single-spacing-unit;
+}
+
+// If you used .grid-item-padded use this on the parent element
+.grid-container {
+	margin-left: -$single-spacing-unit;
+}

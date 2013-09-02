@@ -1,0 +1,41 @@
+
+/* ==========================================================================
+    MEDIA
+   ========================================================================== */
+
+/* The media object abstraction, first proposed here:
+ *
+ * http://www.stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code/
+ *
+ * The media object here takes any element with a class of .media and
+ * floats an image or anything with a .media-object class to the left
+ * and gives it a right margin.
+ *
+ * To reverse this pattern, simply use .media-object-right.
+ */
+
+.media {
+    margin-bottom: $single-spacing-unit;
+
+    &.media-content {
+        @extend .clearfix;
+    }
+
+    .media-content {
+        overflow: hidden;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .media-object {
+        @extend .img-left;
+    }
+
+    .media-object-right {
+        @extend .img-right;
+        margin-right: 0;
+    }
+
+}

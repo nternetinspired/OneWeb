@@ -1,4 +1,3 @@
-
 /* ==========================================================================
    Template:	Oneweb
    Version: 	3.0 for Joomla 2.5, 3+
@@ -31,70 +30,89 @@
  * The Oneweb framework handles basic layout and provides all the css 'tools',
  * while the UI template does all the pretty stuff.
  *
- * This file pulls in the Oneweb framework and any modules that are enabled
- * by default. After that elements are styled by pulling in modules from the
- * UI folder.
- *
- * Modifications to the framework should be made ONLY by overriding its
- * defaults from within the UI template, using the _variables.scss file.
- *
- * Within the UI folder you can do almost anything you want. For example, if
- * you want to add some widgets to your template drop _widgets.scss into the
- * ui folder and then import _widgets.scss using this file. You can also
- * enable the import of any framework modules that are disabled by default,
- * simply by setting the use paramter to true, e.g.,
- *
- * $use-wells:             true;
- *
  * STYLEGUIDE
  * ==========
  *
  * For my sanity an yours Oneweb has been authored according to a styleguide,
  * STYLEGUIDE.md
- *
    ========================================================================== */
 
-/*
- * _variables.scss overrides framework defaults, and enables optional modules,
- * so it needs to be loaded first.
- *
- *
- * Any variables you find set in framework/_defaults.scss should be overridden
- * in ui/_variables.scss.
- */
+
+// Let's start importing framework stuff!
 @import "variables";
 
-/* Now, let's bring in the framework! */
-@import "framework/oneweb";
+// Ensure our mixins are available to all modules by loading them first.
+@import "generic/mixins";
 
-/* Next up, the template UI! */
-/* ==========================================================================
-	Package:	Oneweb template UI
-	Version: 	1.0
-	Created: 	April 2013
-   ========================================================================== */
+// Normalise default browser renderings to eliminate quirks.
+@import "generic/normalise";
 
-// ELEMENTS:
-@import "ui/elements/links";
-@import "ui/elements/typography";
+// Ethereal items like mixins, and helpers like float or clearfix.
+@import "generic/helper";
+@import "generic/vertical-rhythm";
 
-//RESOURCES:
-@import "ui/generic/icomoon";
+/*
+ * The following rules contain generic styles of the type applicable primarily
+ * to named html elements, like <body>, <table> , or to stylistic classes
+ * that can be applied to various objects.
+ */
+@import "elements/root";
 
-//OBJECTS:
-@import "ui/objects/buttons";
-@import "ui/objects/wells";
-@import "ui/objects/icons";
 
-@import "ui/objects/rows";
-@import "ui/objects/header";
-@import "ui/objects/logo";
-@import "ui/objects/nav";
-@import "ui/objects/banner";
-@import "ui/objects/footer";
+@import "elements/code";
+@import "elements/figures";
+@import "elements/forms";
+@import "elements/headings";
+@import "elements/images";
+@import "elements/links";
+@import "elements/lists";
+@import "elements/rules";
+@import "elements/tables";
+@import "elements/typesizing";
+@import "elements/typography";
 
-@import "ui/objects/article-actions";
-@import "ui/objects/article-info";
-@import "ui/objects/above-row-modules";
-@import "ui/objects/below-row-modules";
+/*
+ * The following are re-usable 'objects' that bring recurring CSS patterns
+ * into discrete and easily maintainable modules.
+ */
+@import "patterns/breadcrumbs";
+@import "patterns/buttons";
+@import "patterns/labels";
+@import "patterns/media";
+//@import "patterns/joomla-modules";
+@import "patterns/nav";
+@import "patterns/pagination";
 
+@import "patterns/rows";
+@import "patterns/wells";
+@import "patterns/wrapper";
+
+@import "patterns/fluid-type";
+/*
+ * These following need to override some base element styles,
+ * so we'll load them last.
+ */
+
+/* Override any defaults like display: block on objects. */
+@import "generic/grid";
+@import "generic/widths";
+
+/*
+ * The following are re-usable 'objects' that bring recurring CSS patterns
+ * into discrete and easily maintainable modules.
+ */
+//@import "sections/buttons";
+//@import "sections/icons";
+
+//@import "sections/header";
+//@import "sections/logo";
+//@import "sections/nav";
+//@import "sections/banner";
+//@import "sections/footer";
+
+@import "sections/back-to-top";
+
+//@import "sections/article-actions";
+//@import "sections/article-info";
+@import "sections/above-row-modules";
+@import "sections/below-row-modules";

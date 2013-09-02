@@ -1,0 +1,137 @@
+
+// ==========================================================================
+//  MIXINS
+// ==========================================================================
+
+// Set boxsizing, defaults to border-box.
+@mixin box-sizing($boxsize: border-box) {
+    -webkit-box-sizing: $boxsize;
+    -moz-box-sizing: $boxsize;
+    -ms-box-sizing: $boxsize;
+    box-sizing: $boxsize;
+}
+
+// Set an appropriate line-height for elements when setting font-size.
+@mixin font-size($font-size) {
+    font-size: $font-size;
+    line-height: ceil($font-size / $root-lineheight) * ($root-lineheight / $font-size);
+    margin-top: 0;
+    margin-bottom: ($root-lineheight / $font-size) *1em +em;
+}
+
+// The micro clearfix http://nicolasgallagher.com/micro-clearfix-hack.
+@mixin clearfix {
+    &:before,
+    &:after{
+        content:"";
+        display:table;
+    }
+    &:after{
+        clear:both;
+    }
+}
+
+// Hyphenate text
+@mixin hyphens() {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    -o-hyphens: auto;
+    hyphens: auto;
+}
+
+// Basic transitions.
+@mixin transition($transition: all .3s ease) {
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+    transition: $transition;
+}
+
+// Basic coloured box-shadows.
+@mixin box-shadow($shadow: 0 1px 3px rgba(0,0,0,.25)) {
+    -webkit-box-shadow: $shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow: $shadow;
+}
+
+// Basic horizontal gradients.
+@mixin horizontal($startColor: $brand-color, $endColor: lighten($brand-color, 10%)) {
+    background-color: $endColor;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, $startColor, $endColor);                   // Safari 5.1+, Chrome 10+
+    background-image: -moz-linear-gradient(left, $startColor, $endColor);                      // FF 3.6+
+    background-image: -ms-linear-gradient(left, $startColor, $endColor);                       // IE10
+    background-image: -o-linear-gradient(left, $startColor, $endColor);                        // Opera 11.10
+    background-image: linear-gradient(left, $startColor, $endColor);                           // W3C
+    background-repeat: repeat-x;
+}
+// Basic vertical gradients.
+@mixin vertical($startColor: $brand-color, $endColor: lighten($brand-color, 10%)) {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from($startColor), to($endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, $startColor, $endColor);                    // Safari 5.1+, Chrome 10+
+    background-color: $endColor;
+    background-image: -moz-linear-gradient(top, $startColor, $endColor);                       // FF 3.6+
+    background-image: -ms-linear-gradient(top, $startColor, $endColor);                        // IE10
+    background-image: -o-linear-gradient(top, $startColor, $endColor);                         // Opera 11.10
+    background-image: linear-gradient(top, $startColor, $endColor);                            // W3C
+    background-repeat: repeat-x;
+}
+
+// Media query mixin to add a defined breakpoint. The following breakpoints
+// are defined in the defaults file but should be re-declared in
+// ui/_variables.scss.
+//
+// palm
+// lap
+// portable
+// desk
+// desk-wide
+//
+// The active breakpoint size is also appended as a class to the html element,
+// primarily to aid in the de-bugging of media-queries.
+//
+// Use the media query mixin like this:
+//
+// @include media-query(desk) {
+//       your-styles-here;
+// }
+//
+// Please note, as this is a mobile-first framework the layout is mobile by
+// default. Palm represents the first breakpoint encountered as screen size
+// increases.
+
+@mixin media-query($media-query) {
+
+    @if $media-query == palm {
+        @media only screen and (min-width: $palm) {
+            @content;
+        }
+    }
+
+    @if $media-query == lap {
+        @media only screen and (min-width: $lap) {
+            @content;
+        }
+    }
+
+    @if $media-query == portable {
+        @media only screen and (min-width: $portable) {
+            @content;
+        }
+    }
+
+    @if $media-query == desk {
+        @media only screen and (min-width: $desk) {
+            @content;
+        }
+    }
+
+    @if $media-query == deskwide {
+        @media only screen and (min-width: $deskwide) {
+            @content;
+        }
+    }
+
+}

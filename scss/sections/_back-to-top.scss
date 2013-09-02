@@ -1,0 +1,16 @@
+
+/* ==========================================================================
+   	BACK TO TOP LINK
+   ========================================================================== */
+
+ a.to-top {
+ 	background: $brand-color;
+ 	bottom: 0;
+ 	color: $root-background;
+ 	cursor: pointer;
+ 	display: block;
+ 	line-height: 1;
+ 	padding: $half-spacing-unit;
+ 	position: fixed;
+ 	right: 0;
+}

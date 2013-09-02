@@ -1,0 +1,32 @@
+/* ==========================================================================
+    HEADER NAV
+   ========================================================================== */
+
+/* MAIN NAVIGATION */
+[role="navigation"] {
+
+	@extend .grid-item;
+	font-variant: small-caps;
+	font-weight: 400;
+
+	ul {
+
+		> li {
+
+			margin: 0 $half-spacing-unit / 4;
+			// Inception rule!! Check the fucking output of this!
+			a {
+				display: block;
+				padding: $half-spacing-unit / 2;
+			}
+		}
+
+	}
+
+	@include media-query(lap) {
+		@extend .lap-three-fifths;
+		text-align: right;
+		vertical-align: middle;
+	}
+
+}
