@@ -73,6 +73,8 @@ if ( !$loadMoo ) {
     unset($doc->_scripts[$this->baseurl.'/media/system/js/modal.js']);
     unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
     unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
+    // Remove call to JTooltips from http://www.jsnippets.net/snippets/php/remove-call-to-jtooltips
+    $doc->_script = preg_replace('%window\.addEvent\(\'domready\',\s*function\(\)\s*{\s*\$\$\(\'.hasTip\'\).each\(function\(el\)\s*{\s*var\s*title\s*=\s*el.get\(\'title\'\);\s*if\s*\(title\)\s*{\s*var\s*parts\s*=\s*title.split\(\'::\',\s*2\);\s*el.store\(\'tip:title\',\s*parts\[0\]\);\s*el.store\(\'tip:text\',\s*parts\[1\]\);\s*}\s*}\);\s*var\s*JTooltips\s*=\s*new\s*Tips\(\$\$\(\'.hasTip\'\),\s*{\s*maxTitleChars:\s*50,\s*fixed:\s*false}\);\s*}\);', '', $doc->_script);
 }
 // Self explanatory
 if ( !$bootBloatJS ) {
