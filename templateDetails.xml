@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.0" type="template" client="site">
-	<name>oneweb</name>
-	<version>3.0</version>
-	<creationDate>30/04/2013</creationDate>
-	<author>Seth Warburton</author>
-	<authorEmail>seth@internet-inspired.com</authorEmail>
-	<copyright>Copyright (C) 2013 Internet Inspired. All rights reserved.</copyright>
+	<name>VolkerSaar</name>
+	<version>1.0</version>
+	<creationDate>05/09/2013</creationDate>
+	<author>Gerhard Sitzmann</author>
+	<authorEmail>gbrh@webseiten-fuer-alle.de</authorEmail>
+	<copyright>Copyright (C) 2013 webseiten-fuer-alle.de.</copyright>
 	<description>TPL_ONEWEB_XML_DESCRIPTION</description>
 	<files>
         <filename>apple-touch-icon.png</filename>
@@ -36,14 +36,20 @@
 		<position>debug</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_volkersaar.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_volkersaar.sys.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_volkersaar.ini</language>
+		<language tag="de-DE">de-DE/de-DE.tpl_volkersaar.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
 			<fieldset name="head" label="TPL_ONEWEB_HEAD_LABEL">
 				<field name="setGeneratorTag" type="text" default="Internet Inspired! - http://internet-inspired.com" label="TPL_ONEWEB_GENERATOR_LABEL" description="TPL_ONEWEB_GENERATOR_DESC" />
 				<field name="analytics" type="text" default="" label="TPL_ONEWEB_ANALYTICS_LABEL" description="TPL_ONEWEB_ANALYTICS_DESC" filter="raw" />
+				<field name="useGoogleFonts" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_USEGOOGLEFONTS_LABEL" description="TPL_ONEWEB_USEGOOGLEFONTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 				<field name="googleWebFonts" type="text" default="http://fonts.googleapis.com/css?family=Lato:300,400" label="TPL_ONEWEB_WEBFONTS_LABEL" description="TPL_ONEWEB_WEBFONTS_DESC" filter="raw" />
 			</fieldset>
 			<fieldset name="customise" label="TPL_ONEWEB_ASSETS_LABEL">
