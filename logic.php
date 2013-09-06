@@ -21,6 +21,7 @@ $frontpage             = $this->params->get('frontpage');
 $setGeneratorTag       = $this->params->get('setGeneratorTag');
 $analytics             = $this->params->get('analytics');
 $googleplus            = $this->params->get('googleplus');
+$useGoogleFonts        = $this->params->get('useGoogleFonts');
 $googleWebFonts        = $this->params->get('googleWebFonts');
 $twitter               = $this->params->get('twitter');
 $twitterLink           = $this->params->get('twitterLink');
@@ -88,7 +89,7 @@ if ($jQuery) {
 // Global styles
 $doc->addStyleSheet($template.'/css/style.css');
 // Google fonts styles
-if ($googleWebFonts != "") {
+if ($useGoogleFonts == 1) {
   $doc->addStyleSheet(''.$googleWebFonts.'');
 }
 //Debug stylesheet
