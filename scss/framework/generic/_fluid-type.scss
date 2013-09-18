@@ -11,7 +11,7 @@
 			font-size: $root-font-size * 1.063%; // 17px if the root was 16px
 		}
 
-		@include media-query(desk-wide) {
+		@include media-query(deskwide) {
 			font-size: $root-font-size * 1.125%; // 18px if the root was 16px
 		}
 
