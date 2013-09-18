@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
 <extension version="3.0" type="template" client="site">
-	<name>VolkerSaar</name>
-	<version>1.0</version>
-	<creationDate>05/09/2013</creationDate>
-	<author>Gerhard Sitzmann</author>
-	<authorEmail>gbrh@webseiten-fuer-alle.de</authorEmail>
-	<copyright>Copyright (C) 2013 webseiten-fuer-alle.de.</copyright>
+	<name>oneweb</name>
+	<version>3.0</version>
+	<creationDate>30/04/2013</creationDate>
+	<author>Seth Warburton</author>
+	<authorEmail>seth@internet-inspired.com</authorEmail>
+	<copyright>Copyright (C) 2013 Internet Inspired. All rights reserved.</copyright>
 	<description>TPL_ONEWEB_XML_DESCRIPTION</description>
 	<files>
         <filename>apple-touch-icon.png</filename>
