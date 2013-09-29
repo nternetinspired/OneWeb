@@ -44,6 +44,10 @@
 			<fieldset name="head" label="TPL_ONEWEB_HEAD_LABEL">
 				<field name="setGeneratorTag" type="text" default="Internet Inspired! - http://internet-inspired.com" label="TPL_ONEWEB_GENERATOR_LABEL" description="TPL_ONEWEB_GENERATOR_DESC" />
 				<field name="analytics" type="text" default="" label="TPL_ONEWEB_ANALYTICS_LABEL" description="TPL_ONEWEB_ANALYTICS_DESC" filter="raw" />
+				<field name="useGoogleFonts" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_USEGOOGLEFONTS_LABEL" description="TPL_ONEWEB_USEGOOGLEFONTS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 				<field name="googleWebFonts" type="text" default="http://fonts.googleapis.com/css?family=Lato:300,400" label="TPL_ONEWEB_WEBFONTS_LABEL" description="TPL_ONEWEB_WEBFONTS_DESC" filter="raw" />
 			</fieldset>
 			<fieldset name="customise" label="TPL_ONEWEB_ASSETS_LABEL">
