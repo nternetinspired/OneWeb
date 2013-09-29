@@ -36,8 +36,8 @@
 		<position>debug</position>
 	</positions>
 	<languages folder="language">
-		<language tag="en-GB">en-GB/en-GB.tpl_volkersaar.ini</language>
-		<language tag="en-GB">en-GB/en-GB.tpl_volkersaar.sys.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.ini</language>
+		<language tag="en-GB">en-GB/en-GB.tpl_oneweb.sys.ini</language>
 	</languages>
 	<config>
 		<fields name="params">
