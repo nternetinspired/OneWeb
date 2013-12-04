@@ -75,9 +75,11 @@ if ( !$loadMoo ) {
 }
 // Self explanatory
 if ( !$bootBloatJS ) {
-  unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery.min.js']);
-  unset($doc->_scripts[$this->baseurl.'media/jui/js/jquery-noconflict.js']);
-  unset($doc->_scripts[$this->baseurl.'media/jui/js/bootstrap.min.js']);
+  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
+  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
+  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
+  unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
+  unset($doc->_scripts[$this->baseurl.'/media/system/js/tabs-state.js']);
 }
 
 #----------------------------- Inject extras into the head -----------------------------#
