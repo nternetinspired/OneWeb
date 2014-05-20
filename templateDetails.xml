@@ -16,6 +16,8 @@
         <filename>apple-touch-icon-144x144-precomposed.png</filename>
         <filename>index.php</filename>
 		<filename>logic.php</filename>
+		<filename>compile.php</filename>
+		<filename>scss.php</filename>
         <filename>templateDetails.xml</filename>
 		<folder>language</folder>
 		<folder>css</folder>
@@ -84,11 +86,12 @@
 				<field name="github" type="text" default="" label="TPL_ONEWEB_GITHUB_LABEL" description="TPL_ONEWEB_GITHUB_DESC" />
 				<field name="githubLink" type="text" default="" label="TPL_ONEWEB_GITHUB_LINK_LABEL" description="TPL_ONEWEB_GITHUB_LINK_DESC" filter="raw" />
 			</fieldset>
-			<fieldset name="TOOLS" label="TPL_ONEWEB_TOOLS_LABEL">
+			<fieldset name="TOOLS" label="TPL_ONEWEB_TOOLS_LABEL" addfieldpath="/templates/oneweb">
 				<field name="debug" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_DEBUG_LABEL" description="TPL_ONEWEB_DEBUG_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
+				<field name="compile" type="compile" label="TPL_ONEWEB_COMPILE_LABEL" />
 			</fieldset>
 		</fields>
 	</config>

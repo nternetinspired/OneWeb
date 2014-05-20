@@ -19,7 +19,7 @@
 
 /* Define the root element styles. */
 html {
-    font: #{$root-font-size}%/#{$root-line-height} $root-font-family;
+    font: #{$root-font-size/$root-line-height}% $root-font-family;
     font-weight: $root-font-weight;
     background-color: $root-background;
     color: $root-font-color;
