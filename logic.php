@@ -1,14 +1,14 @@
 <?php defined('_JEXEC') or die;
-/* =====================================================================
-Template:   OneWeb for Joomla
-Author:     Seth Warburton - Internet Inspired! - @nternetinspired
-Version:    3.0
-Created:    April 2013
-Copyright:  Seth Warburton - (C) 2013 - All rights reserved
-Licenses:   GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
-            DBAD License http://philsturgeon.co.uk/code/dbad-license
-Sources:    http://construct-framework.com
-/* ===================================================================== */
+
+/* =============================================================================
+	Template:   Oneweb for Joomla
+	Author:     Seth Warburton - Internet Inspired! - @nternetinspired
+	Version:    6.0
+	Created:    December 2015
+	Copyright:  Seth Warburton - ©2011–2015. All rights reserved
+	Licenses:   GNU/GPL v3 or later http://www.gnu.org/licenses/gpl-3.0.html
+				DBAD License http://www.dbad-license.org/
+   ========================================================================== */
 
 $app                   = JFactory::getApplication();
 
