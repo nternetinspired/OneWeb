@@ -1,36 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
-<extension version="3.0" type="template" client="site">
+<extension version="3.4" type="template" client="site">
 	<name>oneweb</name>
-	<version>3.0</version>
-	<creationDate>30/04/2013</creationDate>
+	<version>6.0</version>
+	<creationDate>1/10/2014</creationDate>
 	<author>Seth Warburton</author>
 	<authorEmail>seth@internet-inspired.com</authorEmail>
-	<copyright>Copyright (C) 2013 Internet Inspired. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2014 Internet Inspired. All rights reserved.</copyright>
 	<description>TPL_ONEWEB_XML_DESCRIPTION</description>
 	<files>
-        <filename>apple-touch-icon.png</filename>
-        <filename>apple-touch-icon-57x57-precomposed.png</filename>
-        <filename>apple-touch-icon-72x72-precomposed.png</filename>
-        <filename>apple-touch-icon-114x114-precomposed.png</filename>
-        <filename>apple-touch-icon-144x144-precomposed.png</filename>
-        <filename>index.php</filename>
+		<filename>apple-touch-icon.png</filename>
+		<filename>favicon.ico</filename>
+		<filename>humans.txt</filename>
+		<filename>index.php</filename>
 		<filename>logic.php</filename>
-        <filename>templateDetails.xml</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>assets</folder>
 		<folder>language</folder>
-		<folder>css</folder>
-		<folder>fonts</folder>
 		<folder>html</folder>
-		<folder>images</folder>
-		<folder>js</folder>
-		<folder>scss</folder>
 	</files>
 	<positions>
 		<position>menu</position>
 		<position>banner</position>
+		<position>top</position>
 		<position>above</position>
+		<position>above-content</position>
 		<position>complementary</position>
 		<position>below</position>
+		<position>below-content</position>
+		<position>bottom</position>
 		<position>contentinfo</position>
 		<position>breadcrumbs</position>
 		<position>debug</position>
@@ -41,50 +39,17 @@
 	</languages>
 	<config>
 		<fields name="params">
-			<fieldset name="head" label="TPL_ONEWEB_HEAD_LABEL">
+			<fieldset name="basic">
 				<field name="setGeneratorTag" type="text" default="Internet Inspired! - http://internet-inspired.com" label="TPL_ONEWEB_GENERATOR_LABEL" description="TPL_ONEWEB_GENERATOR_DESC" />
 				<field name="analytics" type="text" default="" label="TPL_ONEWEB_ANALYTICS_LABEL" description="TPL_ONEWEB_ANALYTICS_DESC" filter="raw" />
-				<field name="googleWebFonts" type="text" default="http://fonts.googleapis.com/css?family=Lato:300,400" label="TPL_ONEWEB_WEBFONTS_LABEL" description="TPL_ONEWEB_WEBFONTS_DESC" filter="raw" />
-			</fieldset>
-			<fieldset name="customise" label="TPL_ONEWEB_ASSETS_LABEL">
-				<field name="loadMoo" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_MOO_LABEL" description="TPL_ONEWEB_MOO_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="jQuery" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_JQUERY_LABEL" description="TPL_ONEWEB_JQUERY_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="bootBloatJS" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_BOOTSTRAP_LABEL" description="TPL_ONEWEB_BOOTSTRAP_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
-				<field name="scripts" type="radio" class="btn-group" default="1" label="TPL_ONEWEB_SCRIPTS_LABEL" description="TPL_ONEWEB_SCRIPTS_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
 				<field name="frontpage" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_FRONTPAGE_LABEL" description="TPL_ONEWEB_FRONTPAGE_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-			</fieldset>
-			<fieldset name="SOCIAL" label="TPL_ONEWEB_SOCIAL_LABEL">
-				<field name="twitter" type="text" default="" label="TPL_ONEWEB_TWITTER_LABEL" description="TPL_ONEWEB_TWITTER_DESC" />
-				<field name="twitterLink" type="text" default="" label="TPL_ONEWEB_TWITTER_LINK_LABEL" description="TPL_ONEWEB_TWITTER_LINK_DESC" filter="raw" />
-
-				<field name="dribbble" type="text" default="" label="TPL_ONEWEB_DRIBBBLE_LABEL" description="TPL_ONEWEB_DRIBBBLE_DESC" />
-				<field name="dribbbleLink" type="text" default="" label="TPL_ONEWEB_DRIBBBLE_LINK_LABEL" description="TPL_ONEWEB_DRIBBBLE_LINK_DESC" filter="raw" />
-
-				<field name="facebook" type="text" default="" label="TPL_ONEWEB_FACEBOOK_LABEL" description="TPL_ONEWEB_FACEBOOK_DESC" />
-				<field name="facebookLink" type="text" default="" label="TPL_ONEWEB_FACEBOOK_LINK_LABEL" description="TPL_ONEWEB_FACEBOOK_LINK_DESC" filter="raw" />
-
-				<field name="googleplus" type="text" default="" label="TPL_ONEWEB_GOOGLEPLUS_LABEL" description="TPL_ONEWEB_GOOGLEPLUS_DESC" />
-				<field name="googleplusLink" type="text" default="" label="TPL_ONEWEB_GOOGLEPLUS_LINK_LABEL" description="TPL_ONEWEB_GOOGLEPLUS_LINK_DESC" filter="raw" />
-
-				<field name="github" type="text" default="" label="TPL_ONEWEB_GITHUB_LABEL" description="TPL_ONEWEB_GITHUB_DESC" />
-				<field name="githubLink" type="text" default="" label="TPL_ONEWEB_GITHUB_LINK_LABEL" description="TPL_ONEWEB_GITHUB_LINK_DESC" filter="raw" />
-			</fieldset>
-			<fieldset name="TOOLS" label="TPL_ONEWEB_TOOLS_LABEL">
+				<field name="container" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_CONTAINER_LABEL" description="TPL_ONEWEB_CONTAINER_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
 				<field name="debug" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_DEBUG_LABEL" description="TPL_ONEWEB_DEBUG_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
