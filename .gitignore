@@ -2,3 +2,7 @@
 node_modules
 .sass-cache
 .tmp
+
+# Temporary ignores while under construction
+src/scss/*
+css/*
