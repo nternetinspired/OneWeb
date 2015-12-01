@@ -51,7 +51,7 @@ $isHomepage      = $langTag ? ($menu->getActive() == $menu->getDefault($langTag)
 $template        = 'templates/'.$this->template;
 
 // Load Bootstrap 3 CSS from their CDN
-$doc->addStyleSheet('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
+//$doc->addStyleSheet('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
 
 // Global styles
 $doc->addStyleSheet($template.'/css/style.css');
@@ -60,7 +60,7 @@ $doc->addStyleSheet($template.'/css/style.css');
 // $doc->addStyleSheet('//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic');
 
 // Load Jquery from Google
-$doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+$doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 
 // Load Bootstrap 3 JS from their CDN
 // $doc->addScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
