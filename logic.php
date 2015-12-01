@@ -59,6 +59,9 @@ $doc->addStyleSheet($template.'/css/main.css');
 // Include any Google fonts required
 // $doc->addStyleSheet('//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic');
 
+// Load Modernizr; custom build
+$doc->addScript($template.'/js/vendor/modernizr-3.2.0.min.js');
+
 // Load Jquery from Google
 $doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js');
 
