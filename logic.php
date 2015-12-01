@@ -54,7 +54,7 @@ $template        = 'templates/'.$this->template;
 //$doc->addStyleSheet('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
 
 // Global styles
-$doc->addStyleSheet($template.'/css/style.css');
+$doc->addStyleSheet($template.'/css/main.min.css');
 
 // Include any Google fonts required
 // $doc->addStyleSheet('//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic');
@@ -70,7 +70,7 @@ $doc->addHeadLink($template.'/img/apple-touch-icon.png', 'apple-touch-icon');
 
 // Load template scripts the Joomla way, in <head>
 $doc->addScript($template.'/js/plugins.min.js');
-$doc->addScript($template.'/js/scripts.min.js');
+$doc->addScript($template.'/js/main.min.js');
 
 #------------------- Modify Joomla's default <head> content -------------------#
 
