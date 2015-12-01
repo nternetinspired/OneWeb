@@ -46,10 +46,6 @@
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
 				</field>
-				<field name="container" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_CONTAINER_LABEL" description="TPL_ONEWEB_CONTAINER_DESC">
-					<option value="0">JNO</option>
-					<option value="1">JYES</option>
-				</field>
 				<field name="debug" type="radio" class="btn-group" default="0" label="TPL_ONEWEB_DEBUG_LABEL" description="TPL_ONEWEB_DEBUG_DESC">
 					<option value="0">JNO</option>
 					<option value="1">JYES</option>
