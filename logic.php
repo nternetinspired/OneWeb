@@ -10,99 +10,91 @@
 				DBAD License http://www.dbad-license.org/
    ========================================================================== */
 
-$app                   = JFactory::getApplication();
+// Grab our global variables - set the stage
+$app             = JFactory::getApplication();
+$doc             = JFactory::getDocument();
+$lang            = JFactory::getLanguage();
+$user            = JFactory::getUser();
 
-// Define shortcuts for template parameters
-$loadMoo               = $this->params->get('loadMoo');
-$jQuery                = $this->params->get('jQuery');
-$bootBloatJS           = $this->params->get('bootBloatJS');
-$scripts               = $this->params->get('scripts');
-$frontpage             = $this->params->get('frontpage');
-$setGeneratorTag       = $this->params->get('setGeneratorTag');
-$analytics             = $this->params->get('analytics');
-$googleplus            = $this->params->get('googleplus');
-$googleWebFonts        = $this->params->get('googleWebFonts');
-$twitter               = $this->params->get('twitter');
-$twitterLink           = $this->params->get('twitterLink');
-$dribbble              = $this->params->get('dribbble');
-$dribbbleLink          = $this->params->get('dribbbleLink');
-$facebook              = $this->params->get('facebook');
-$facebookLink          = $this->params->get('facebookLink');
-$googleplus            = $this->params->get('googleplus');
-$googleplusLink        = $this->params->get('googleplusLink');
-$github                = $this->params->get('github');
-$githubLink            = $this->params->get('githubLink');
-$debug                 = $this->params->get('debug');
+// Determine active site variables
+$langTag         = $lang ? JFactory::getLanguage()->getTag() : null;
+$sitename        = htmlspecialchars($app->getCfg('sitename'));
 
-// Detecting Active Variables
-$option                = $app->input->getCmd('option', '');
-$view                  = $app->input->getCmd('view', '');
-$itemid                = $app->input->getCmd('Itemid', '');
+// Grab our template parameters
+$frontpage       = $this->params->get('frontpage');
+$setGeneratorTag = $this->params->get('setGeneratorTag');
+$analytics       = $this->params->get('analytics');
+$debug           = $this->params->get('debug');
 
-// Are we are on the homepage?
-$menu                  = $app->getMenu();
-if ($menu->getActive() == $menu->getDefault()) {$siteHome = 'home';} else {$siteHome = 'sub';};
+// Detect active page variables
+$option          = $app->input->getCmd('option', '');
+$view            = $app->input->getCmd('view', '');
+$layout          = $app->input->getCmd('layout', 'default');
+$task            = $app->input->getCmd('task', '');
+$itemid          = $app->input->getCmd('Itemid', '');
+$lang            = $app->input->getCmd('lang', null);
+$menu            = $app->getMenu();
 
-// Do we have social links?
-$social                = ($twitterLink?1:0)+ ($dribbbleLink?1:0)+ ($facebookLink?1:0)+ ($googleplusLink?1:0)+ ($githubLink?1:0);
+// Grab page details we need
+$title           = $doc->getTitle();
+$description     = $doc->getDescription();
+$url             = $doc->getBase();
+$pageclass       = $menu->getActive()->params->get('pageclass_sfx');
 
-#----------------------------- Construct Code Snippets-----------------------------#
-// GPL code taken from Construct template framework by Matt Thomas http://construct-framework.com/
+// Show component output on the homepage?
+$showHomepage    = 1;
 
-// To enable use of site configuration
-$pageParams            = $app->getParams();
+// Determine if we are on the homepage
+$isHomepage      = $langTag ? ($menu->getActive() == $menu->getDefault($langTag)) : ($menu->getActive() == $menu->getDefault());
 
-// Returns a reference to the global document object
-$doc                   = JFactory::getDocument();
+// Define relative path to the  current template
+$template        = 'templates/'.$this->template;
 
-// Define relative path to the  current template directory
-$template              = 'templates/'.$this->template;
+// Load Bootstrap 3 CSS from their CDN
+$doc->addStyleSheet('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css');
 
-// Change generator tag
-$this->setGenerator($setGeneratorTag);
-
-#----------------------------- End Construct Code -----------------------------#
-
-// Remove MooTools if set to no.
-if ( !$loadMoo ) {
-   unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/modal.js']);
-    unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
-    unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
-}
-// Self explanatory
-if ( !$bootBloatJS ) {
-  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
-  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
-  unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
-  unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
-  unset($doc->_scripts[$this->baseurl.'/media/system/js/tabs-state.js']);
-}
-
-#----------------------------- Inject extras into the head -----------------------------#
-// Currently the latest minified version from Google. It's smaller than the Joomla version.
-if ($jQuery) {
-  $doc->addScript($this->baseurl.'/templates/'.$this->template.'/js/jquery-1.8.2.min.js');
-}
 // Global styles
 $doc->addStyleSheet($template.'/css/style.css');
-// Google fonts styles
-if ($googleWebFonts != "") {
-  $doc->addStyleSheet(''.$googleWebFonts.'');
-}
-//Debug stylesheet
-if ($debug =="1") {
-  $doc->addStyleSheet('https://rawgithub.com/nternetinspired/debug-css/master/debug.css');
-}
-// Metas
-$doc->setMetaData( 'HandheldFriendly', 'True' );
-$doc->setMetaData( 'MobileOptimized', '320' );
-// This lets mobile devices know we have thought about them
+
+// Include any Google fonts required
+// $doc->addStyleSheet('//fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic');
+
+// Load Jquery from Google
+$doc->addScript('https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js');
+
+// Load Bootstrap 3 JS from their CDN
+// $doc->addScript('https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js');
+
+// Point to our Apple Touch Icon (180x180px) thingy
+$doc->addHeadLink($template.'/img/apple-touch-icon.png', 'apple-touch-icon');
+
+// Load template scripts the Joomla way, in <head>
+$doc->addScript($template.'/js/plugins.min.js');
+$doc->addScript($template.'/js/scripts.min.js');
+
+#------------------- Modify Joomla's default <head> content -------------------#
+
+// Change the generator tag
+$this->setGenerator(JText::_('TPL_ONEWEB_GENERATOR'));
+
+// Let mobile devices know we've got them covered and they shouldn't do their own thang.
 $doc->setMetaData( 'viewport', 'width=device-width, initial-scale=1.0' );
-// Kick IE out of compatibility mode and disable it
-//$doc->setMetaData( 'X-UA-Compatible', 'IE=edge;chrome=1' );
-// For Win mobile
-//$doc->setMetaData( 'cleartype', 'on');
+
+// NOTE: It's recommended to remove unwanted Joomla scripts with the excellent
+// plugin by @phproberto: https://github.com/phproberto/plg_sys_mootable as it
+// ensures that another extension or module will not reload all that junk again.
+// The following provide an alternative, but less robust method to offload junk.
+// Remove junk we don't need.
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools-more.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/core.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/caption.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/modal.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/mootools.js']);
+unset($doc->_scripts[$this->baseurl.'/plugins/system/mtupgrade/mootools.js']);
+unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery.min.js']);
+unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-noconflict.js']);
+unset($doc->_scripts[$this->baseurl.'/media/jui/js/jquery-migrate.min.js']);
+unset($doc->_scripts[$this->baseurl.'/media/jui/js/bootstrap.min.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/tabs-state.js']);
+unset($doc->_scripts[$this->baseurl.'/media/system/js/html5fallback.js']);
