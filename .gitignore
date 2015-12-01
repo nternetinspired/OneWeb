@@ -5,4 +5,5 @@ node_modules
 
 # Temporary ignores while under construction
 src/scss/*
-css/*
+main.css
+main.css.map
